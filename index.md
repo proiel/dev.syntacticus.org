@@ -30,3 +30,7 @@ For historical reasons the components that make up Syntacticus are scattered bet
 * [syntacticus.org](https://github.com/mlj/syntacticus.org): the user-facing treebank browser on [syntacticus.org](http://syntacticus.org).
 * [Syntacticus API](https://github.com/mlj/syntacticus-api): the Rails API that powers [syntacticus.org](http://syntacticus.org) and indexes treebanks.
 * [PROIEL Annotator](https://github.com/mlj/proiel-webapp):  a web-based tool for creating and annotating treebanks. This is a decade-old project that is in the middle of a complete rewrite; try one of the 'stable' releases which are the ones that have actually been deployed. Some (partially out-dated) documentation for this tool is available from [it's wiki](https://github.com/mlj/proiel-webapp/wiki).
+
+# Contact
+
+https://gitter.im/proiel/syntacticus
