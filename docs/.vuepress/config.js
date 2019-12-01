@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Syntacticus developer's resources",
+  title: 'Syntacticus',
   description: 'Resources for developers using the Syntacticus treebank',
   base: '/',
   themeConfig: {
@@ -10,7 +10,8 @@ module.exports = {
     sidebar: 'auto',
     displayAllHeaders: true,
     nav: [
-      { text: 'Annotation Guide', link: '/annotation-guide/' },
+      { text: 'Annotation guide', link: '/annotation-guide/' },
+      { text: 'Development guide', link: '/development-guide/' },
       { text: 'Treebank browser', link: 'http://syntacticus.org' }
     ]
   }
