@@ -1,8 +1,3 @@
----
-layout: page
-permalink: /
----
-
 Syntacticus is an umbrella project for several treebanks that deal specifically with the older stages of Indo-European languages. You can browse these treebanks using our [end-user front end](http://syntacticus.org).
 
 The raw data sets are produced, curated and hosted separatedly by each constituent treebank. The software and infrastructure that is used to create the treebanks, analyse them and browse them is shared.
@@ -33,4 +28,4 @@ For historical reasons the components that make up Syntacticus are scattered bet
 
 # Contact
 
-https://gitter.im/proiel/syntacticus
+You can talk to us on [Gitter](https://gitter.im/proiel/syntacticus)

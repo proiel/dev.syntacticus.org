@@ -1,8 +1,3 @@
----
-layout: page
-permalink: /gsoc
----
-
 If you are new to Syntacticus, and would like to contribute code, we ask that you first consider working on one of our Beginners' exercises, so to get a feel for what Syntacticus is.
 
 ## Ideas for GSoC projects

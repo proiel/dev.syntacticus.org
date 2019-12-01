@@ -1,9 +1,0 @@
-title: Syntacticus developer's resources
-email: mariuslj@ifi.uio.no
-description: >- # this means to ignore newlines until "baseurl:"
-  Resources for developers using the Syntacticus treebank
-baseurl: "/"
-url: "http://dev.syntacticus.org"
-markdown: kramdown
-plugins:
-  - jekyll-feed
