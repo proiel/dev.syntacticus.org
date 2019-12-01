@@ -7,6 +7,8 @@ module.exports = {
     docsRepo: 'proiel/dev.syntacticus.org',
     docsDir: 'docs',
     editLinks: true,
+    lastUpdated: 'Last updated',
+    logo: '/assets/img/logo.png',
     sidebar: 'auto',
     displayAllHeaders: true,
     nav: [
