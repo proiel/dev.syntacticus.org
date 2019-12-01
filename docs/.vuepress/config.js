@@ -6,6 +6,12 @@ module.exports = {
     repo: 'mlj/syntacticus.org',
     docsRepo: 'proiel/dev.syntacticus.org',
     docsDir: 'docs',
-    editLinks: true
+    editLinks: true,
+    sidebar: 'auto',
+    displayAllHeaders: true,
+    nav: [
+      { text: 'Annotation Guide', link: '/annotation-guide/' },
+      { text: 'Treebank browser', link: 'http://syntacticus.org' }
+    ]
   }
 }
