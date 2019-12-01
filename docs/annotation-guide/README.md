@@ -1,4 +1,6 @@
-# Annotation Guide
+---
+title: Annotation guide
+---
 
 ## Introduction
 

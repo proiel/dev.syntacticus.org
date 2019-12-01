@@ -10,6 +10,7 @@ module.exports = {
     sidebar: 'auto',
     displayAllHeaders: true,
     nav: [
+      { text: 'About Syntacticus', link: '/' },
       { text: 'Annotation guide', link: '/annotation-guide/' },
       { text: 'Development guide', link: '/development-guide/' },
       { text: 'Treebank browser', link: 'http://syntacticus.org' }
