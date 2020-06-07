@@ -2,6 +2,10 @@
 title: Annotation guide
 ---
 
+::: warning
+This annotation guide is partially transferred from an older [PDF version](/proiel-annotators-handbook-v1.pdf). There is a also a separate set of guidelines for information structure, also as an old [PDF version](/proiel-givenness-annotation-v1.pdf).
+:::
+
 ## Introduction
 
 The system of annotation presented here is based on dependency grammar
