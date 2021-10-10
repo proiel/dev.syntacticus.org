@@ -1,2 +1,9 @@
 node_modules
 docs/.vuepress/dist/
+texmf/tmp.aux
+texmf/tmp.dvi
+texmf/tmp.log
+texmf/tmp.pdf
+texmf/tmp.ps
+texmf/tmp.svg
+texmf/tmp.tex

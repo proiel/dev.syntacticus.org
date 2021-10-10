@@ -131,7 +131,7 @@ Conversely, when direct speech is wedged into another main clause, as
 сьде хь is in the following example, the direct speech is analysed as
 a PARPRED:
 
-{% tree %}
+```tree
 \begin{example}
     \sisterskip=3.5em
     \tree{\ntnode{Z0}{Root}{},
@@ -152,7 +152,7 @@ a PARPRED:
     \psset{linestyle=solid}
     \treelinewidth=.5pt
 \end{example}
-{% endtree %}
+```
 
 > аште речетъ къто вамъ се сьде хь. не имѣте вѣрꙑ
 
@@ -194,11 +194,11 @@ Main clauses \topicword{Main clauses} do not have a function within
 some larger sentence, therefore their verbs are attached to the root via
 the relation PREDication:
 
-{% tree %}
+```tree
 \begin{example}
     \Tree [.Root [.PRED\\dico [.Aux\\enim ] [.OBL\\vobis ] ] ]
 \end{example}
-{% endtree %}
+```
 
 > Dico enim vobis
 
@@ -207,11 +207,11 @@ a subjunction, the subjunction is assigned the relation which
 corresponds to the function of the clause, and the verb is attached to the
 subjunction via the relation PRED:
 
-{% tree %}
+```tree
 \begin{example}
     \Tree [.Root [.PRED\\dicite [.COMP\\quia [.PRED\\est [.XOBJ\\necessarius [.OBL\\Domino ] ] ] ] ] ]
 \end{example}
-{% endtree %}
+```
 
 > Dicite quia Domino necessarius est
 
@@ -230,11 +230,11 @@ inserted, see section \ref{ellipsis}.
 Auxiliary verbs \topicword{Auxiliary verbs}are attached to the main verb
 via the relation AUX:
 
-{% tree %}
+```tree
 \begin{example}
     \Tree [.Root [.PRED\\dictum [.Aux\\est ] [.OBL\\uobis ] ] ]
 \end{example}
-{% endtree %}
+```
 
 > Dictum est vobis
 
@@ -244,21 +244,21 @@ empty verb whenever none is present. For example, when Jesus asks the
 disciples how many baskets of bread they distributed, the disciples answer
 'seven':
 
-{% tree %}
+```tree
 \begin{example}
     \Tree [.Root [.PRED\\0 [.OBJ\\septem ] ] ]
 \end{example}
-{% endtree %}
+```
 
 On the other hand, there are cases where a participle is coordinated
 with a finite verb. Since we annotate syntactic function, and not form,
 these are treated as PREDs, corresponding to their function:
 
-{% tree %}
+```tree
 \begin{example}
     \Tree [.Root [.PRED\\\scriptgr{καὶ} [.PRED\\\scriptgr{προσεφώνησεν} [.OBJ\\\scriptgr{μαθητὰς} [.Aux\\\scriptgr{τοὺς} ] [.ATR\\\scriptgr{αὐτοῦ} ] ] ] [.PRED\\\scriptgr{ἐκλεξάμενος} [.OBL\\\scriptgr{ἀπ’} [.OBL\\\scriptgr{αὐτῶν} ]  ] [.OBJ\\\scriptgr{δώδεκα} ] ] ] ]
 \end{example}
-{% endtree %}
+```
 
 > προσεφώνησεν τοὺς μαθητὰς αὐτοῦ, καὶ ἐκλεξάμενος ἀπ’ αὐτῶν δώδεκα
 
@@ -271,24 +271,24 @@ annotate function and not form, so this relation is not only used for
 vocative nouns, but also for nominative and accusative exclamations as
 well as for different interjections etc.
 
-{% tree %}
+```tree
     \Tree [.Root [.VOC\\Catilina ] [.PRED\\habemus [.OBJ\\consultum [.ATR\\senatus ] [.ATR\\in [.OBL\\te ] ] [.APOS\\et [.APOS\\vehemens ] [.APOS\\grave ] ] ] ] ]
-{% endtree %}
+```
 
 > Habemus senatus consultum in te, Catilina, vehemens et grave
 
-{% tree %}
+```tree
     \Tree [.Root [.VOC\\amen ] [.PRED\\dico [.OBL\\vobis ] ] ]
-{% endtree %}
+```
 
 > Amen, dico vobis
 
 Some sentences consist of only an exclamation. In such cases there is no
 need to introduce an empty PRED-node:
 
-{% tree %}
+```tree
     \Tree [.Root [.VOC\\osanna [.ADV\\in [.OBL\\excelsis ] ] ] ]
-{% endtree %}
+```
 
 > Osanna in excelsis
 
@@ -296,9 +296,9 @@ Notice in particular that _ecce_, _ἰδοὺ_, and _се_ belong here. In many
 cases, these are used in presentation constructions, which should then be
 analysed as involving an empty PRED \corref{10474}:
 
-{% tree %}
+```tree
     \Tree [.Root [.VOC\\ecce ] [.PRED\\0 [.SUB\\et [.SUB\\fratres [.ATR\\mei ] ] [.SUB\\mater [.ATR\\mea ] ] ] ] ]
-{% endtree %}
+```
 
 > ecce mater mea et fratres mei
 
@@ -318,9 +318,9 @@ ADVerbial, as well as some supertags described in section
 
 In the typical case, SUB relates a nominative noun to its verb:
 
-{% tree %}
+```tree
     \extree {.Root [.PRED\\expellit [.ADV\\statim ] [.SUB\\Spiritus ][.OBJ\\eum ] [.OBL\\in [.OBL\\desertum ] ] ] }
-{% endtree %}
+```
 
 > statim Spiritus expellit eum in desertum
 
@@ -328,24 +328,24 @@ But on some \topicword{Partitive\\subjects}occasions, we also find
 partitive expressions (genitive nouns and prepositional phrases) which are
 subjects and must be given the relation SUB:
 
-{% tree %}
+```tree
     \extree {.Root [.PRED\\dixerunt [.SUB\\ex [.OBL\\discipulis [.ATR\\eius ] ] ] [.OBL\\ad [.OBL\\invicem ] ] ] }
-{% endtree %}
+```
 
 > ex discipulis eius dixerunt ad invicem
 
-{% tree %}
+```tree
     \extree {.Root [.PRED\\\ocs{бѣ} [.Aux\\\ocs{не} ] [.OBL\\\ocs{има} ] [.SUB\\\ocs{мѣста} ] [.ADV\\\ocs{въ} [.OBL\\\ocs{обитѣли} ] ] ] }
-{% endtree %}
+```
 
 > не бѣ има мѣста въ обитѣли (Luke 2:7)
 
 Note that more generally, preposition phrases can serve as subjects in
 Greek when they are nominalised by the article:
 
-{% tree %}
+```tree
     \extree{.Root [.PRED\\\scriptgr{ἐξῆλθον} [.SUB\\\scriptgr{παρ’} [.OBL\\\scriptgr{αὐτοῦ} ] [.Aux\\\scriptgr{οἱ} ] ] ] }
-{% endtree %}
+```
 
 > οἱ παρ’ αὐτοῦ ἐξῆλθον
 
@@ -362,9 +362,9 @@ nouns in oblique cases in an absolute construction, see section
 
 In the typical case, OBJ relates an accusative noun to the verb:
 
-{% tree %}
+```tree
     \extree {.Root [.PRED\\intravit [.Aux\\et ] [.ADV\\iterum ] [.OBJ\\Caphernaum ] [.ADV\\post [.OBL\\dies ] ] ] }
-{% endtree %}
+```
 
 > iterum intravit Capharnaum post dies
 
@@ -377,9 +377,9 @@ As with subjects, \topicword{Partitive\\objects} we sometimes find
 partitive expressions which are objects. They are given the relation
 OBJ:
 
-{% tree %}
+```tree
     \extree{.Root [.PRED\\afficient [.OBL\\morte ] [.OBJ\\ex [.OBL\\vobis ] ] ] }
-{% endtree %}
+```
 
 > morte afficient ex vobis
 
@@ -395,9 +395,9 @@ In OCS, negated objects regularly occur in the genitive. They should be
 analysed as OBJs. Again, if there is doubt whether the verb requires the
 accusative or the genitive, use the supertag ARG.
 
-{% tree %}
+```tree
     \extree {.Root [.PRED\\\ocs{вѣсте} [.SUB\\\ocs{вꙑ} ] [.Aux\\\ocs{не} ] [.OBJ\\\ocs{ничесоже} ]  ]  }
-{% endtree %}
+```
 
 > вꙑ не вѣсте ничесоже (John 11:49)
 
@@ -439,9 +439,9 @@ well as prepostional arguments.
 
 \topicword{Indirect\\objects}
 
-{% tree %}
+```tree
     \extree {.Root [.PRED\\dixit [.Aux\\et ] [.OBL\\mihi ] [.SUB\\angelus ] ] }
-{% endtree %}
+```
 
 > et dixit mihi angelus
 
@@ -452,9 +452,9 @@ prepositions and adverbs, so e.g. _huc_ should very often be an
 OBL. Other prepositions that are necessary to the meaning of the verb,
 such as in e.g. _pertinere ad_, also belong here:
 
-{% tree %}
+```tree
     \extree{.Root [.PRED\\introibo [.Aux\\et ] [.OBL\\ad [.OBL\\eum ] ] ] }
-{% endtree %}
+```
 
 > et introibo ad eum
 
@@ -466,9 +466,9 @@ A restricted \topicword{Arguments\\of adjectives}group of adjectives
 such as _similis_, _dissimilis_ also take complement nouns. We
 relate these nouns to their adjectives via the relation OBL:
 
-{% tree %}
+```tree
     \extree{.Root [.PRED\\erat [.SUB\\iris ] [.XOBJ\\similis [.OBL\\visioni [.ATR\\zmaragdinae ] ] ] ] }
-{% endtree %}
+```
 
 > iris erat similis visioni zmaragdinae
 
@@ -477,9 +477,9 @@ the complement of the preposition is also considered an oblique
 argument (of the preposition), no matter the function of the phrase as
 a whole:
 
-{% tree %}
+```tree
     \extree {.Root [.PRED\\cenabo [.ADV\\cum [.OBL\\illo ] ] ] }
-{% endtree %}
+```
 
 > cenabo cum illo
 
@@ -489,15 +489,15 @@ In passive constructions, and some rare active ones, we use the
 relation AG to relate a non-nominative agent to the verb. A typical
 example is: \topicword{PPs as agents}
 
-{% tree %}
+```tree
     \extree {.Root [.PRED\\obicuntur [.SUB\\quae ] [.OBL\\tibi ] [.AG\\ab [.OBL\\his ] ] ] }
-{% endtree %}
+```
 
 > quae tibi obicuntur ab his
 
-{% tree %}
+```tree
     \extree {.Root [.PRED\\\ocs{кръсти} [.Aux\\\ocs{сѧ} ] [.AG\\\ocs{отъ} [.OBL\\\ocs{иоана} ]  ]  ]  }
-{% endtree %}
+```
 
 > кръсти сѧ отъ иоана} (Mark 1:9)
 
@@ -505,9 +505,9 @@ The same relation AGent is used whenever the agent is expressed by a
 pure case form rather than a prepositional construction:
 \topicword{Pure\\case forms}
 
-{% tree %}
+```tree
     \extree {.Root [.VOC\\\scriptgr{ἰδοὺ} ] [.PRED\\\scriptgr{πεπραγμένον}  [.Aux\\\scriptgr{καὶ} ] [.SUB\\\scriptgr{οὐδὲν} [.ATR\\\scriptgr{ἄξιον} [.OBL\\\scriptgr{θανάτου} ] ] ] [.Aux\\\scriptgr{ἐστὶν} ]  [.AG\\\scriptgr{αὐτῷ} ] ] }
-{% endtree %}
+```
 
 > ἰδοὺ οὐδὲν ἄξιον θανάτου ἐστὶν πεπραγμένον αὐτῷ
 
@@ -516,7 +516,7 @@ Greek, however, some intransitives are regularly used instead of the
 expected passive form of a verb. Verbs occurring with this construction
 include _πάσχω_, _πίπτω_, _φεύγω_, _εὖ_/_κακῶς ἀκούω_, _ἀποθνῄσκω_.
 
-{% tree %}
+```tree
     \psset{linestyle=solid} \treelinewidth=.5pt\daughterskip=4em
     \sisterskip=4em
     \tree{\ntnode{Z0}{root}{},
@@ -532,11 +532,11 @@ include _πάσχω_, _πίπτω_, _φεύγω_, _εὖ_/_κακῶς ἀκού
     {\ntnode{Z278083}{\scriptgr{αὐτῶν}}{\nodeconnect{Z278082}{Z278083}\mput*{OBL}}}}}}}
     \treelinewidth=1pt\psset{linestyle=dotted}
     \anodecurve[tr]{Z278081}[br]{Z278077}
-{% endtree %}
+```
 
-{% tree %}
+```tree
     \extree{.\scriptgr{παθοῦσα} [.ADV\\\scriptgr{πολλὰ} ] [.AG\\\scriptgr{ὑπὸ} [.OBL\\\scriptgr{ἰατρῶν} [.ATR\\\scriptgr{πολλῶν} ] ] ] }
-{% endtree %}
+```
 
 Since these verbs are functionally equivalent to passives and have
 supplanted the passive verbs forms (although the passive of
@@ -559,25 +559,25 @@ gerunds. In some cases, it is not clear whether they are adverbials or
 oblique arguments, and in that case, sections \ref{supertags} and
 \ref{advobl} should be consulted:\topicword{Adverbs}
 
-{% tree %}
+```tree
     \extree {.Root [.PRED\\epulabatur [.ADV\\cotidie ] [.ADV\\splendide ] ] }
-{% endtree %}
+```
 
 > epulabatur cotidie splendide
 
 \topicword{Preposition phrases}
 
-{% tree %}
+```tree
     \extree {.Root [.PRED\\moechatus [.ADV\\iam ] [.Aux\\est ]  [.OBJ\\eam ] [.ADV\\in [.OBL\\corde [.ATR\\suo ] ] ] ] }
-{% endtree %}
+```
 
 > iam moechatus est eam in corde suo
 
 \topicword{Noun in\\oblique case}
 
-{% tree %}
+```tree
     \extree {.Root [.PRED\\dicunt [.Aux\\et ] [.ADV\\die [.ATR\\primo ] [.ATR\\azymorum ] ]  [.OBL\\ei ] [.SUB\\discipuli ] ] }
-{% endtree %}
+```
 
 > Et primo die azymorum dicunt ei discipuli
 
@@ -598,21 +598,21 @@ The relation\topicword{ADV\\modifying\\non-verbal\\elements} ADV is also
 used for sub-sentence-level modifiers of adjectives, prepositions,
 numerals (see \corref{36579}) and other adverbs:
 
-{% tree %}
+```tree
     \extree {.Root [.PRED\\erat  [.XOBJ\\dives [.ADV\\valde ] ] ] }
-{% endtree %}
+```
 
 > erat valde dives
 
-{% tree %}
+```tree
     \extree {.Root [.PRED\\factae [.Aux\\sunt ] [.SUB\\tenebrae ] [.ADV\\per [.OBL\\terram [.ATR\\totam ] ] ] [.ADV\\in [.ADV\\usque ] [.OBL\\horam [.ATR\\nonam ] ] ] ] }
-{% endtree %}
+```
 
 > tenebrae factae sunt per totam terram usque in horam nonam
 
-{% tree %}
+```tree
     \extree {.Root  [.PRED\\veniunt  [.Aux\\et ] [.ADV\\mane [.ADV\\valde ] ] [.ADV\\una [.ATR\\sabbatorum ] ][.OBL\\ad [.OBL\\monumentum ] ] ] }
-{% endtree %}
+```
 
 > et valde mane una sabbatorum veniunt ad monumentum
 
@@ -634,7 +634,7 @@ as in Gothic _wair\th{}an du_, OCS бꙑти въ.
 Note that predicatives can be of many different syntactic categories:
 adjectives, nouns and preposition phrases are typical examples:
 
-{% tree %}
+```tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{est}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
     {\tnode{cic}{Cicero}{\nodeconnect{Z1}{cic}\mput*{SUB}}},
@@ -645,11 +645,11 @@ adjectives, nouns and preposition phrases are typical examples:
     \psset{linestyle=solid}
     \treelinewidth=.5pt
     \topicword{Nominative\\noun}
-{% endtree %}
+```
 
 > Cicero consul est
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{creaverunt}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -663,11 +663,11 @@ adjectives, nouns and preposition phrases are typical examples:
     \psset{linestyle=solid}
     \treelinewidth=.5pt
     \topicword{Accusative\\noun}
-{% endtree %}
+```
 
 > Romani Ciceronem consulem creaverunt
 
-{% tree %}
+```tree
     \label{esse1}
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
@@ -683,11 +683,11 @@ adjectives, nouns and preposition phrases are typical examples:
     \treelinewidth=.5pt
     %%end tree
     \topicword{Preposition\\phrase}
-{% endtree %}
+```
 
 > navis in medio mari erat
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{reddite}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -702,7 +702,7 @@ adjectives, nouns and preposition phrases are typical examples:
     \psset{linestyle=solid}
     \treelinewidth=.5pt
   \topicword{Genitive noun}
-{% endtree %}
+```
 
 > reddite quae sunt Caesaris Caesari
 
@@ -719,7 +719,7 @@ a predicational structure (normally without a finite verb) containing
 a distributive element or a list. A classical example is _and all were
 going to be enrolled, each to his proper city_:
 
-{% tree %}
+```tree
     \psset{linestyle=solid}
     \treelinewidth=.5pt\daughterskip=4em
     \sisterskip=4em
@@ -736,7 +736,7 @@ going to be enrolled, each to his proper city_:
     {\ntnode{Z321437}{\scriptgr{ἑαυτοῦ}}{\nodeconnect{Z321438}{Z321437}\mput*{ATR}}}}}}}}
     \treelinewidth=1pt\psset{linestyle=dotted}
     \anodecurve[tr]{Z321432}[br]{Z321431}
-{% endtree %}
+```
 
 > καὶ ἐπορεύοντο πάντες ἀπογράφεσθαι, ἕκαστος εἰς τὴν ἑαυτοῦ πόλιν
 
@@ -808,15 +808,15 @@ adjective, participle or a numeral. Such elements should be given the
 appropriate function in the sentence, and should _not_ be related to an
 empty node representing the 'elliptical' subject, object or otherwise:
 
-{% tree %}
+```tree
   \extree{.Root [.PRED\\biberunt [.SUB\\omnes ] [.OBL\\ex [.OBL\\illo ] ] ] }
-{% endtree %}
+```
 
 > omnes ex illo biberunt
 
-{% tree %}
+```tree
   \extree{.Root [.PRED\\responderunt [.SUB\\prudentes ] ] }
-{% endtree %}
+```
 
 > responderunt prudentes
 
@@ -834,9 +834,9 @@ prepositions and adverbs in constructions like _οἱ παρ’ αὐτοῦ_ 't
 around him' or _οἱ νῦν_ 'people nowadays'. In such cases, the preposition
 should be the head and the article an Aux, as usual:
 
-{% tree %}
+```tree
   \extree{.Root [.PRED\\\scriptgr{ἐξῆλθον} [.SUB\\\scriptgr{παρ’} [.OBL\\\scriptgr{αὐτοῦ} ] [.Aux\\\scriptgr{οἱ} ] ] ] }
-{% endtree %}
+```
 
 > οἱ παρ’ αὐτοῦ ἐξῆλθον
 >
@@ -851,9 +851,9 @@ establishing the referent should be the head.
 This means that numerals should not be the head if there are other
 available heads, so _alii duo_ 'two others' should be
 
-{% tree %}
+```tree
   \extree{.alii [.ATR\\duo ] }
-{% endtree %}
+```
 
 and not the other way around. Generally the hierarchy is
 
@@ -861,23 +861,23 @@ and not the other way around. Generally the hierarchy is
 
 This means that _tria haec_ should be
 
-{% tree %}
+```tree
   \extree{.haec [.ATR\\tria ] }
-{% endtree %}
+```
 
 and _haec omnia_ should be
 
-{% tree %}
+```tree
   \extree{.haec [.ATR\\omnia ] }
-{% endtree %}
+```
 
 Notice that since relative clauses are lowest on the hierarchy, sentences
 like _omnis quicumque confessus fuerit in me_ will be representendes as
 relative clauses modifying the quantifier:
 
-{% tree %}
+```tree
   \extree{.omnis [.ATR\\confessus [.Aux\\fuerit ] [.OBL\\in [.OBL\\me ] ] [.SUB\\quicumque ] ] }
-{% endtree %}
+```
 
 > 'whoever believes in me'
 
@@ -928,9 +928,9 @@ sections. There is also supplementary information in section
 Attributes are given the tag ATR. Here is an example with an adjective
 and a possessive pronoun:
 
-{% tree %}
+```tree
   \extree {.Root [.PRED\\est [.SUB\\Pater [.ATR\\vester ] [.ATR\\caelestis ] ] [.XOBJ\\perfectus ] ] }
-{% endtree %}
+```
 
 > pater vester caelestis perfectus est
 
@@ -938,9 +938,9 @@ Here is a \topicword{Descriptive\\genitives}subtree involving a
 descriptive genitive and a numeral which is an attribute of the
 genitive noun:
 
-{% tree %}
+```tree
   \extree{.SUB\\puer [.ATR\\annorum [.ATR\\decem ] ] }
-{% endtree %}
+```
 
 > puer decem annorum
 
@@ -956,9 +956,9 @@ name of a city or a small island in Latin) is equivalent to a directional
 prepositional phrase, dependent adverbs will have to be ATR and not
 ADV:
 
-{% tree %}
+```tree
   \extree{.Root [.PRED\\miserunt [.Aux\\et ] [.OBJ\\Barnaban ] [.OBL\\Antiochiam [.ATR\\usque ] ] ] }
-{% endtree %}
+```
 
 > et miserunt Barnaban usque Antiochiam
 
@@ -977,9 +977,9 @@ Such nouns are never restrictive (if they are, they are attached via the
 relation ATR instead), and we do not attempt to keep apart predicative
 appositions from other appositive nouns.
 
-{% tree %}
+```tree
   \extree {.Root [.PRED\\detexit [.SUB\\Cicero [.APOS\\consul ] ] [.OBJ\\coniurationem [.ATR\\Catilinae ] ] ] } \label{Cicero}
-{% endtree %}
+```
 
 > Cicero consul coniurationem Catilinae detexit
 
@@ -997,7 +997,7 @@ a timeless property of the head is expressed, or at least a property which
 is not tied to the time of the governing verb, as in the following
 example:
 
-{% tree %}
+```tree
     \psset{linestyle=solid}
     \treelinewidth=.5pt\daughterskip=4em
     \sisterskip=3.5em
@@ -1019,7 +1019,7 @@ example:
     \treelinewidth=1pt\psset{linestyle=dotted}
     \anodecurve[tr]{Z339354}[br]{Z339353}
     \anodecurve[tr]{Z339357}[br]{Z339356}
-{% endtree %}
+```
 
 > Εἰσῆλθεν δὲ σατανᾶς εἰς Ἰούδαν τὸν καλούμενον Ἰσκαριώτην, ὄντα ἐκ τοῦ ἀριθμοῦ τῶν δώδεκα
 >
@@ -1036,7 +1036,7 @@ apposition. In such cases we follow the surface word order: the
 expressions which comes first in the sentence is taken as the head,
 while the one that follows, is taken as an apposition.
 
-{% tree %}
+```tree
     %\corref{36625} %slavisk rekkefølge BA
     \psset{linestyle=solid}
     \treelinewidth=.5pt\daughterskip=4em
@@ -1053,13 +1053,13 @@ while the one that follows, is taken as an apposition.
     {\ntnode{Z542128}{\ocs{сьде}}{\nodeconnect{Z542126}{Z542128}\mput*{APOS}}}}}}
     \treelinewidth=1pt\psset{linestyle=dotted}
     \anodecurve[tr]{Z542126}[br]{Z542123}
-{% endtree %}
+```
 
 > не и ли сестрꙑ его сѫтъ оу насъ сьде
 >
 > 'Are not his sisters with us, here?'
 
-{% tree %}
+```tree
     %\corref{6775} %gresk rekkefølge AB
     \psset{linestyle=solid}
     \treelinewidth=.5pt\daughterskip=4em
@@ -1076,7 +1076,7 @@ while the one that follows, is taken as an apposition.
     {\ntnode{Z105457}{\scriptgr{ἡμᾶς}}{\nodeconnect{Z105456}{Z105457}\mput*{OBL}}}}}}}
     \treelinewidth=1pt\psset{linestyle=dotted}
     \anodecurve[tr]{Z105455}[br]{Z105453}
-{% endtree %}
+```
 
 > καὶ οὐκ εἰσὶν αἱ ἀδελφαὶ αὐτοῦ ὧδε πρὸς ἡμᾶς
 >
@@ -1097,15 +1097,15 @@ tag.
 Adnominal partitive expressions are typically realised as genitives or
 preposition phrases:
 
-{% tree %}
+```tree
     \Tree [.Root [.PRED\\mortuus [.Aux\\est ] [.SUB\\unus [.PART\\ex [.OBL\\eis ] ] ] ] ]
-{% endtree %}
+```
 
 > Unus ex eis mortuus est
 
-{% tree %}
+```tree
   \Tree [.Root  [.PRED\\mortuus [.Aux\\est ] [.SUB\\unus [.PART\\eorum ] ] ] ]
-{% endtree %}
+```
 
 > Unus eorum mortuus est
 
@@ -1118,18 +1118,18 @@ vineae_ is a normal object of _acciperet_.
 The PART relation is not limited to the meaning 'one of/some of'. It is
 also used for other part-whole relations as in
 
-{% tree %}
+```tree
   \extree{.Root [.PRED\\accepit [.SUB\\Maria ] [.OBJ\\libram [.PART\\unguenti ] ] ] }
-{% endtree %}
+```
 
 > Maria accepit libram unguenti
 
 Genitives required by numerals (as often happens in OCS, but also in other
 languages) should be analysed as PART:
 
-{% tree %}
+```tree
   \extree {.Root [.PRED\\\ocs{иматъ} [.OBJ\\\ocs{пѧть} [.PART\\\ocs{хлѣбъ} ] ] ] }
-{% endtree %}
+```
 
 In general, PART should not be used for 'components' such as body part
 nouns, or 'the root of the tree' and similar: there should be
@@ -1145,24 +1145,24 @@ verbs.[^1] A clear case are
 so-called objective genitives, but also other items like prepositional
 phrases can be NARGs:
 
-{% tree %}
+```tree
   \extree{.Root [.PRED\\est [.SUB\\baptismus ] [.XOBJ\\ingressio [.NARG\\in [.OBL\\sanctitatem [.ATR\\Dei ] ] ] ] ] }
-{% endtree %}
+```
 
 > baptismus est ingressio in sanctitatem Dei
 
 In OCS, arguments of nouns can sometimes be denominal adjectives, as
 \ocs{бзии} in the following example:
 
-{% tree %}
+```tree
     \ocs{и бѣ об ношть въ молитвѣ бзии}
-{% endtree %}
+```
 
 Verbal nouns, such as infinitives and gerundives, are often NARGs when
 they are dependent on deverbal nouns, but they can also restrict the
 nouns, see section \ref{adnominf}.
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{est}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -1177,7 +1177,7 @@ nouns, see section \ref{adnominf}.
     \anodecurve[l]{Z4}[r]{Z2}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > Tota spes vincendi est in confirmatione
 
@@ -1278,7 +1278,7 @@ questions).
 
 Our representation is therefore:
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{dicitur}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -1291,13 +1291,13 @@ Our representation is therefore:
     \anodecurve[l]{Z4}[r]{Z3}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > dicitur Homerum caecum fuisse
 
 Notice that the so-called nominative with infinitive is treated differently:
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{dicitur}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -1311,7 +1311,7 @@ Notice that the so-called nominative with infinitive is treated differently:
     \anodecurve[l]{Z3}[r]{Z2}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > dicitur Homerus caecus fuisse
 
@@ -1354,15 +1354,15 @@ attached to the subjunction via the same relation PRED that we use in
 main clauses. The subjunction is related to the matrix clause via COMP
 if it is a complement clause:
 
-{% tree %}
+```tree
   \Tree [.Root [.PRED\\audistis [.COMP\\quia [.PRED\\dictum [.Aux\\est ] [.OBL\\antiquis ] [.COMP\\occides [.Aux\\non ] ] ] ] ] ]
-{% endtree %}
+```
 
 > audistis quis dictum est antiquis non occides
 
-{% tree %}
+```tree
   \Tree [.Root [.PRED\\datum [.Aux\\est ] [.OBL\\illis ] [.COMP\\ne [.PRED\\occiderent [.OBJ\\eos ] ] ] ] ]
-{% endtree %}
+```
 
 > datum est illis ne occiderent eos
 
@@ -1375,7 +1375,7 @@ _εἰπεῖν_ may take a complement clause introduced by
 _ἴνα_, in which case the speech verb itself is intrepreted as
 expressing the will of the speaker.
 
-{% tree %}
+```tree
     \psset{linestyle=solid}
     \treelinewidth=.5pt\daughterskip=4em
     \sisterskip=4em
@@ -1388,7 +1388,7 @@ expressing the will of the speaker.
     {\ntnode{Z103321}{\scriptgr{προσκαρτερῇ}}{\nodeconnect{Z103319}{Z103321}\mput*{PRED}},
     {\ntnode{Z103320}{\scriptgr{πλοιάριον}}{\nodeconnect{Z103321}{Z103320}\mput*{SUB}}}}}}}
     \treelinewidth=1pt\psset{linestyle=dotted}
-{% endtree %}
+```
 
 \corref{6622}
 
@@ -1402,18 +1402,18 @@ subjunction will only have a single daughter, the verb, although sometimes a
 subjunction can be modified. For example, we can have _εἰ καί_ or _et si_ (=
 _etsi_) where _καί_/_et_ modifies the subjunction:
 
-{% tree %}
+```tree
     \Tree [.ADV\\si [.Aux\\et ] [.PRED\\scandalizati [.SUB\\omnes ] [.Aux\\fuerint ] ] ]
-{% endtree %}
+```
 
 > et si omnes fuerint scandalizati
 
 This means 'even if everyone is scandalized'. In cases where _et si_ means 'and
 if', _et_ should be attached to the main verb:
 
-{% tree %}
+```tree
     \Tree [.Root [.PRED\\deficient [.ADV\\in [.OBL\\via ] ] [.Aux\\et ] [.ADV\\si [.PRED\\dimisero [.OBJ\\eos ] [.OBL\\in [.OBL\\domum [.ATR\\suam ] ] ] ] ] ] ]
-{% endtree %}
+```
 
 > et si dimisero eos in domum suam deficient in via
 
@@ -1429,9 +1429,9 @@ subjunction, e.g. when _ut_ is left out. In such cases, the
 function of the subordinate clause is annotated directly on the verb,
 and the function is almost always COMP:
 
-{% tree %}
+```tree
     \Tree [.Root [.PRED\\vide [.COMP\\dixeris [.OBL\\nemini ] ] ] ]
-{% endtree %}
+```
 
 > vide dixeris nemini
 
@@ -1464,15 +1464,15 @@ The verb of a relative clause with an antecedent is attached to
 relation ATR (restrictive relative clauses) or APOS (non-restrictive
 relative clauses):
 
-{% tree %}
+```tree
   \Tree [.Root [.PRED\\illudebant [.OBL\\ei ] [.Aux\\et ] [.SUB\\viri [.ATR\\tenebant [.SUB\\qui ] [.OBJ\\illum ] ] ] ] ]
-{% endtree %}
+```
 
 > Et viri qui tenebant illum, illudebant ei
 
-{% tree %}
+```tree
   \Tree [.Root [.PRED\\dicit  [.SUB\\Deus [.APOS\\est  [.SUB\\qui ] [.XOBJ\\omnipotens ] ] ] ] ]   %based on Rev 1.8
-{% endtree %}
+```
 
 > dicit Deus qui est omnipotens
 
@@ -1493,7 +1493,7 @@ but also relative adverbs should be annotated this way, since relative adverbs
 also have a function within their own clause. The same goes for interrogative
 adverbs. The following sentence illustrates _ubi_ in both uses:
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{est}{est}{\nodeconnect{Z0}{est}\mput*{PRED}},
@@ -1512,13 +1512,13 @@ adverbs. The following sentence illustrates _ubi_ in both uses:
     \anodecurve[r]{Z1}[l]{Z2}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > ubi est refectio mea ubi pascha cum discipulis meis manducem
 
-{% tree %}
+```tree
     \Tree [.Root [.PRED\\\ocs{обрѣте} [.OBJ\\\ocs{мѣсто} [.ATR\\\ocs{бѣ} [.ADV\\\ocs{идеже} ] [.XOBJ\\\ocs{написано} ] ] ] ] ]
-{% endtree %}
+```
 
 > обрѣте мѣсто идеже бѣ написано
 
@@ -1526,9 +1526,9 @@ If there is no antecedent \topicword{Relatives\\without\\antecedent}
 for the relative pronoun, the verb of the relative clause will itself
 bear a sentence-level function within the matrix clause:
 
-{% tree %}
+```tree
     \Tree [.Root [.PRED\\audiat [.SUB\\habet [.SUB\\qui ] [.OBJ\\aurem ] ] ] ]
-{% endtree %}
+```
 
 > qui habet aurem, audiat
 
@@ -1541,15 +1541,15 @@ Notice that this style of annotation implies that the relation of the
 subordinate verb changes if the correlate is left out. Consider the
 following two sentences:
 
-{% tree %}
+```tree
     \Tree [.Root  [.PRED\\scribe [.OBJ\\ea [.ATR\\uides [.OBJ\\quae ] ] ] ] ]
-{% endtree %}
+```
 
 > scribe ea quae vides
 
-{% tree %}
+```tree
     \Tree [.Root [.PRED\\scribe [.OBJ\\uides [.OBJ\\quae ] ] ] ]
-{% endtree %}
+```
 
 > scribe quae vides
 
@@ -1561,9 +1561,9 @@ A variant of headless relative clauses are those which have an
 internal head.\topicword{Internally headed\\relative clauses} In this case the noun is given its function inside the
 relative clause (normally with the relative pronoun as an ATR):
 
-{% tree %}
+```tree
     \Tree [.Root [.PRED\\metietur [.ADV\\vobis ] [.Aux\\et ] [.ADV\\mensi [.Aux\\fueritis ] [.ADV\\in [.OBL\\mensura [.ATR\\qua ] ] ] ] ] ]
-{% endtree %}
+```
 
 > et in qua mensura mensi fueritis metietur vobis
 >
@@ -1573,9 +1573,9 @@ Sometimes the correct position of the relative pronoun can be deep
 inside the clause it introduces, e.g. in an embedded accusative with
 infinitve:
 
-{% tree %}
+```tree
     \Tree [.Root [.PRED\\manducavit [.OBJ\\panes [.ATR\\licet [.Aux\\non ] [.COMP\\manducare [.OBJ\\quos ] ] ] ] ] ]
-{% endtree %}
+```
 
 Sometimes a sentence where the relative pronoun does not have a role
 is coordinated with the real relative clause. We still coordinate such
@@ -1584,7 +1584,7 @@ following example, the relative pronouns arguably does have a function
 in both sentences, but not the same function (it could be an ADV in
 the second clause), so we cannot express this in our notation:
 
-{% tree %}
+```tree
     \psset{linestyle=solid}
     \treelinewidth=.5pt\daughterskip=4em
     \sisterskip=4em
@@ -1604,7 +1604,7 @@ the second clause), so we cannot express this in our notation:
     \psset{linestyle=solid}
     \treelinewidth=.5pt\daughterskip=4em
     \sisterskip=4em
-{% endtree %}
+```
 
 > ꙇ вьзвѣсти имь. елико ти гъ сътвори и помилова тѧ
 
@@ -1628,18 +1628,18 @@ annotated accordingly. The verb of the indirect question is given the
 function of the whole subordniate sentence, which in the case of
 indirect questions is almost always COMP:
 
-{% tree %}
+```tree
     \Tree [.Root [.PRED\\quaesivit [.COMP\\exivisset [.ADV\\quare ] ] ] ]
-{% endtree %}
+```
 
 > quaesivit quare exivisset
 
 However, in rare cases a dependent question can have adverbial
 (e.g. conditional) force:
 
-{% tree %}
+```tree
     \Tree [.Root [.PRED\\dabit [.OBJ\\lapidem ] [.OBL\\illi ] [.Aux\\numquid ] [.ADV\\petet [.SUB\\quis [.PART\\ex [.OBL\\vobis ] ] ] [.Aux\\autem ] [.OBJ\\panem ] ] ] ]
-{% endtree %}
+```
 
 > quis autem ex vobis patrem petet panem numquid lapidem dabit illi
 
@@ -1653,9 +1653,9 @@ subject in the accusative, a predicate which is a verb in the
 infinitive and possibly further arguments and adjuncts. The infinitive
 is given the relation COMP:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\vidi [.COMP\\cecidisse [.SUB\\stellam ] [.OBL\\de [.OBL\\caelo ] ] [.OBL\\in [.OBL\\terram ] ] ] ] ]
-{% endtree %}
+```
 
 > vidi stellam de caelo in terram cecidisse
 
@@ -1664,9 +1664,9 @@ lacking.\topicword{Elided\\infinitive} Most often the elided
 infinitive is _esse_ or a similar verb, and we introduce an
 empty, verbal node:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\vidimus [.Aux\\aut ] [.ADV\\quando ] [.COMP\\0 [.SUB\\te ] [.XOBJ\\aut [.XOBJ\\infirmum ] [.XOBJ\\in [.OBL\\carcere ] ] ] ] ] ]
-{% endtree %}
+```
 
 > quando te vidimus infirmum aut in carcere
 
@@ -1696,9 +1696,9 @@ _fecit_. Both analyses would in principle be possible, but
 annotators should always use the AcI analysis with the accusative noun
 dependent on the infinitive:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\fecit [.COMP\\accumbere [.SUB\\omnes ] ] ] ]
-{% endtree %}
+```
 
 > fecit omnes accumbere
 
@@ -1713,9 +1713,9 @@ of a dative subject, a predicate which is a verb in the infinitive,
 and possibly other dependents, and the entire construction is a COMP
 to e.g. a speech verb. It should be analysed like AcIs:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\\ocs{придѭ} [.SUB\\\ocs{садоукеи} [.APOS\\\ocs{глглѭтъ} [.SUB\\\ocs{иже} ] [.COMP\\\ocs{бꙑти} [.Aux\\\ocs{не} ] [.SUB\\\ocs{вьскрѣшению} ] ] ] ] ] ]
-{% endtree %}
+```
 
 > придѭ садоукеи иже глглѭтъ не бꙑти вьскрѣшению (Mark 12:18)
 
@@ -1728,18 +1728,18 @@ relation to the rest of the sentence. We consider the participial verb
 to be the head of the construction. It is therefore related to the
 matrix clause via the relation ADV:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\dixit [.ADV\\conuocata [.SUB\\turba ] ] [.OBL\\eis ] ] ]
-{% endtree %}
+```
 
 > convocata turba dixit eis
 
 The predicate in an absolute construction need not be a verb: it can
 be a noun or an adjective. In such cases, we assume an empty verb:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\detexit [.OBJ\\coniurationem [.ATR\\Catilinae ] ] [.ADV\\0 [.SUB\\Cicerone ] [.XOBJ\\consule ] ] [.SUB\\senatus ] ] ]
-{% endtree %}
+```
 
 > Cicerone consule senatus coniurationem Catilinae detexit
 
@@ -1764,17 +1764,17 @@ frequent case of such a construction, is the _ad_ + gerundive +
 noun construction. In this locution, the noun is almost always
 dependent on the gerundive:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\venit [.ADV\\ad [.OBL\\legendos [.SUB\\libros ] ] ] ] ]
-{% endtree %}
+```
 
 > venit ad libros legendos
 
 But the _ab urbe condita_-construction is found in other contexts as well:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\est [.XOBJ\\superbus [.ADV\\victa [.SUB\\serpente ] ] ] ] ]
-{% endtree %}
+```
 
 > superbus victa serpente est
 >
@@ -1804,7 +1804,7 @@ ADV, but are most often NARGs. Consult section \ref{narg}, as well as
 Infinitives can also be objects of verbs. This typically happens with
 auxiliary verbs like _uelle_, _posse_ etc.:
 
-{% tree %}
+```tree
 \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{potest}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
     {\tnode{Z2}{non}{\nodeconnect{Z1}{Z2}\mput*{Aux}}},
@@ -1819,13 +1819,13 @@ auxiliary verbs like _uelle_, _posse_ etc.:
     \anodecurve[l]{Z6}[r]{Z4}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > non potest se ipsum facere salvum
 
 But it is also found with some other verbs, such as _dare_:
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{dabo}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -1840,7 +1840,7 @@ But it is also found with some other verbs, such as _dare_:
     \anodecurve[l]{Z3}[r]{Z2}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > dabo ei edere de ligno vitae
 
@@ -1855,7 +1855,7 @@ slash notation, see section [Slash Notation](#slash-notation).
 The so-called\topicword{Nominative with\\infinitive} nominative with
 infinitive construction also involves an XOBJ:
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{putabantur}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -1870,7 +1870,7 @@ infinitive construction also involves an XOBJ:
     \anodecurve[l]{Z4}[r]{Z2}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > Terentii fabellae a Laelio scribi putabantur
 
@@ -1882,7 +1882,7 @@ perception words which take an accusative with participle construction
 are analysed as taking the accusative as an object and the participle
 as an XOBJ:
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{vidi}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -1894,7 +1894,7 @@ as an XOBJ:
     \anodecurve[l]{Z3}[r]{Z2}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > Vidi puerum currentem
 
@@ -1905,7 +1905,7 @@ as an XOBJ:
 Conjunct (or predicative) participles are adverbials which modify the
 matrix verb, to which they are attached via the relation XADV:
 
-{% tree %}
+```tree
 %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{exivit}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -1920,14 +1920,14 @@ matrix verb, to which they are attached via the relation XADV:
     \anodecurve[l]{Z2}[l]{Z1}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > exclamans voce magna exivit ab eo
 
 Like predicative participles, predicative adjectives are also given
 the tag XADV:
 
-{% tree %}
+```tree
 \label{gauls}
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
@@ -1942,7 +1942,7 @@ the tag XADV:
     \anodecurve[b]{Z3}[b]{Z2}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > Galli laeti in castra pergunt
 
@@ -1952,9 +1952,9 @@ rather modify the main verb, ie. the above sentence means 'The Gauls
 proceeded happily into the camp.' whereas the meaning 'The happy Gauls
 proceeded into the camp.' would be represented as
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\pergunt [.SUB\\Galli [.ATR\\laeti ] ] [.OBL\\in [.OBL\\castra ] ] ] ]
-{% endtree %}
+```
 
 > Galli laeti in castra pergunt
 
@@ -1964,7 +1964,7 @@ the nominative, and should be analysed as an XADV, to capture its
 apposition-like relationship to the subject. The second component, on
 the other hand, will be an OBJ, OBL or ADV daughter of the verb.
 
-{% tree %}
+```tree
     \tree{\ntnode{Z0}{ROOT}{},
     {\ntnode{hode}{\ocs{глахѫ} }{\nodeconnect{Z0}{hode}\mput*{PRED}},
     {\tnode{Z1}{\ocs{ꙇ} }{\nodeconnect{hode}{Z1}\mput*{AUX}}},
@@ -1976,7 +1976,7 @@ the other hand, will be an OBJ, OBL or ADV daughter of the verb.
     \anodecurve[r]{berte}[r]{hode}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > ꙇ глахѫ дроугъ къ дроугоу
 
@@ -1986,7 +1986,7 @@ pronouns.
 The infinitive of purpose is also an adverbial expression and should
 be assigned to the relation XADV \topicword{Infinitives\\of purpose}:
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{\scriptgr{παρέσμεν}}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -1996,7 +1996,7 @@ be assigned to the relation XADV \topicword{Infinitives\\of purpose}:
     \anodecurve[r]{Z2}[r]{Z1}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > παρέσμεν ἀκοῦσαι
 
@@ -2020,9 +2020,9 @@ sentence predicate via the relation Aux. In many sentences there is
 one introductory conjunction, which should be an aux under the first
 verb, and then a coordination of two verbs:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\et [.PRED\\veniunt [.Aux\\et ] ] [.PRED\\dicunt [.OBL\\illi ] ] ] ]
-{% endtree %}
+```
 
 > Et veniunt et dicunt illi
 >
@@ -2091,9 +2091,9 @@ coordination. The conjunction then inherits this relation and is
 attached to its head via the same relation that it bears to its
 daughter(s):
 
-{% tree %}
+```tree
 \Tree [.Root [.VOC\\Iesu [.ATR\\Nazarene ] ] [.PRED\\0 [.SUB\\quid ] [.OBL\\et [.OBL\\nobis ] [.OBL\\tibi ] ] ] ]
-{% endtree %}
+```
 
 > Quid tibi et nobis, Iesu Nazarene?
 
@@ -2104,9 +2104,9 @@ conjuntions which occur before the first conjunct!) should serve as a
 head of the coordinated phrase, and any further conjunctions should
 depend on the first one via the relation Aux
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\scio [.OBJ\\et [.OBJ\\opera [.ATR\\tua ] ] [.OBJ\\laborem ] [.Aux\\et ] [.OBJ\\quia [.PRED\\potes [.Aux\\non ] [.OBJ\\sustinere [.OBJ\\malos ] ] ] ] ] ] ]
-{% endtree %}
+```
 
 > scio opera tua et quia non potes sustinere malos
 
@@ -2123,13 +2123,13 @@ be 'good men and good citizens' (tree (b) below), in which case
 _boni_ modifies both _viri_ and _cives_. We
 represent the difference in the following way:
 
-{% tree %}
+```tree
 \Tree [ [.SUB\\et [.SUB\\uiri [.ATR\\boni ] ] [.SUB\\ciues ] ] ]
-{% endtree %}
+```
 
-{% tree %}
+```tree
 \Tree [ [.SUB\\et [.ATR\\boni ] [.SUB\\uiri ] [.SUB\\ciues ] ] ]
-{% endtree %}
+```
 
 In this way, the adjective has correct scope, see section \ref{scope}.
 
@@ -2166,7 +2166,7 @@ two conjuncts.
 Sometimes the principle of identical relation leads to slightly forced
 analyses:
 
-{% tree %}
+```tree
     \psset{linestyle=solid}
     \treelinewidth=.5pt\daughterskip=4em
     \sisterskip=3.5em
@@ -2188,7 +2188,7 @@ analyses:
     \treelinewidth=1pt\psset{linestyle=dotted}
     \psset{linestyle=solid}
     \treelinewidth=.5pt\daughterskip=4em
-{% endtree %}
+```
 
 > καὶ διηγήσαντο αὐτοῖς οἱ ἰδόντες πῶς ἐγένετο τῷ δαιμονιζομένῳ καὶ περὶ τῶν χοίρων
 
@@ -2208,7 +2208,7 @@ such coordinations as sentence coordinations, see example \ref{tosmstn}.
 
 On the other hand, it _is_ possible to coordinate two XOBJs:
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{vidit}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -2222,7 +2222,7 @@ On the other hand, it _is_ possible to coordinate two XOBJs:
     \anodecurve[l]{Z3}[r]{Z2}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > vidit spiritum descendentem et manentem
 
@@ -2232,7 +2232,7 @@ to _spiritum_, see [Slash Notation](#slash-notation).
 It is also possible to coordinate a nominal object with an accusative
 with infinitive, even if the object takes a predicative complement:
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{invenit}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -2249,7 +2249,7 @@ with infinitive, even if the object takes a predicative complement:
     \anodecurve[l]{Z6}[r]{Z5}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > invenit puellam iacentem supra lectum et daemonium exisse
 
@@ -2292,7 +2292,7 @@ we treat all such cases as sentence coordination and mark shared
 arguments via the 'slash notation', see section \ref{ellipsis}. The
 representation is therefore:
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{et}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -2309,7 +2309,7 @@ representation is therefore:
     \anodecurve[l]{Z7}[r]{Z6}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > homo induebatur purpura et bysso et epulabatur cotidie
 
@@ -2317,7 +2317,7 @@ If there is more than one conjunction present, the first one which occurs betwee
 the coordinated elements, whereas subsequent conjunctions will be
 attached to the first one via the relation Aux. Any conjunction preceding the first conjunct will be an Aux on that first conjunct:
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{et}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -2336,7 +2336,7 @@ attached to the first one via the relation Aux. Any conjunction preceding the fi
     \anodecurve[b]{Z10}[r]{Z9}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > et quattuor animalia dicebant amen et seniores ceciderunt et adoraverunt
 
@@ -2344,7 +2344,7 @@ In subordinate clauses without a subjunction, the verbs do not bear
 the relation PRED but corresponding to the funtion of the subordinate
 clause. Conjunct verbs are analysed as sentence coordination here too:
 
-{% tree %}
+```tree
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
     {\ntnode{Z1}{audiat}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -2357,7 +2357,7 @@ clause. Conjunct verbs are analysed as sentence coordination here too:
     \psset{linestyle=dotted}
     \treelinewidth=1pt
     \anodecurve[bl]{vsab}[r]{ssab}
-{% endtree %}
+```
 
 > qui uiuit et aurem habet, audiat
 
@@ -2377,7 +2377,7 @@ conjunct lacks the verb and is therefore marked with a slash arrow
 towards the overt verb, ie. it is a kind of predication which shares
 the central element, the predicate, with the first conjunct):
 
-{% tree %}
+```tree
     \label{tosmstn}
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
@@ -2400,11 +2400,11 @@ the central element, the predicate, with the first conjunct):
     \anodecurve[l]{Z9}[r]{Z7}
     \psset{linestyle=solid}
     \treelinewidth=.5pt
-{% endtree %}
+```
 
 > εἶδεν σχιζομένους τοὺς οὐρανοὺς καὶ τὸ πνεῦμα καταβαῖνον εἰς αὐτόν
 
-{% tree %}
+```tree
     \label{mors1}
     %%% begin tree
     \tree{\ntnode{Z0}{Root}{},
@@ -2423,13 +2423,13 @@ the central element, the predicate, with the first conjunct):
     \anodecurve[l]{empty}[r]{verbh}
     \anodecurve[l]{empty}[r]{oblh}
     \vspace*{3em}
-{% endtree %}
+```
 
 In other cases, not only the predicate but also other elements can be shared between the two conjuncts.
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\Ø [.PRED\\\scriptgr{ἐστίν}     [.Aux\\\scriptgr{γὰρ} ]     [.SUB\\\scriptgr{λόγος} [.Aux\\\scriptgr{ὁ} ] [.ATR\\\scriptgr{σταυροῦ} [.Aux\\\scriptgr{ὁ} ] [.Aux\\\scriptgr{τοῦ} ] ] ]    [.OBL\\\scriptgr{ἀπολλυμένοις} [.Aux\\\scriptgr{τοῖς} ] [.Aux\\\scriptgr{μὲν} ] ] [.XOBJ\\\scriptgr{μωρία} ] ] [.PRED\\Ø [.OBL\\\scriptgr{ἡμῖν} [.ATR\\\scriptgr{σῳζομένοις} [.Aux\\\scriptgr{τοῖς} ] [.Aux\\\scriptgr{δὲ} ] ] ] [.XOBJ\\\scriptgr{δύναμις} [.ATR\\\scriptgr{θεοῦ} ] ] ] ] ]
-{% endtree %}
+```
 
 > Ὁ λόγος γὰρ ὁ τοῦ σταυροῦ τοῖς μὲν ἀπολλυμένοις μωρία ἐστίν, τοῖς δὲ σῳζομένοις ἡμῖν δύναμις θεοῦ ἐστιν
 
@@ -2476,7 +2476,7 @@ Since we take the verb to be the head of the entire sentence in our
 model, we always need a verb in the analysis. However, copular verbs
 are often elided. In such cases we insert an empty copula:
 
-{% tree %}
+```tree
 \psset{linestyle=solid}
 \treelinewidth=.5pt\daughterskip=4em
 \sisterskip=4em
@@ -2493,7 +2493,7 @@ are often elided. In such cases we insert an empty copula:
 \treelinewidth=1pt\psset{linestyle=dotted}
 \anodecurve[tr]{Z251517}[bl]{Z251518}
 \anodecurve[tr]{Z251521}[bl]{Z251523}
-{% endtree %}
+```
 
 > beati pauperes spiritu quoniam ipsorum est regnum caelorum
 >
@@ -2520,7 +2520,7 @@ empty verb which is given the relation PRED, and the shared elements
 are stored in a list, as explained in section \ref{multiroot}. One
 further example will suffice:
 
-{% tree %}
+```tree
 \label{aquitania}
 %%% begin tree
 \tree{\ntnode{Z0}{0}{},
@@ -2536,7 +2536,7 @@ further example will suffice:
 \anodecurve[l]{Z4}[r]{Z1}
 \psset{linestyle=solid}
 \treelinewidth=.5pt
-{% endtree %}
+```
 
 > unam incolunt Belgae, aliam Aquitani
 
@@ -2555,9 +2555,9 @@ verb towards an argument of an XADV participle, see example
 When a Greek noun phrase does not contain any articles, it is treated
 like NPs in other languages:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\\scriptgr{κατεδίωξεν} [.Aux\\\scriptgr{καὶ} ] [.OBJ\\\scriptgr{αὐτὸν} ] [.SUB\\\scriptgr{Σίμων} ] ] ]
-{% endtree %}
+```
 
 > καὶ κατεδίωξεν αὐτὸν Σίμων
 
@@ -2576,7 +2576,7 @@ since our syntax is dependency-based and not configurational, there is
 no difference between _ταχύς ὁ ἀνήρ τρέχει_ and _ὁ
   ἀνήρ ταχύς τρέχει_:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{\scriptgr{τρέχει} }{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -2589,7 +2589,7 @@ no difference between _ταχύς ὁ ἀνήρ τρέχει_ and _ὁ
 \anodecurve[r]{tak}[bl]{an}
 \psset{linestyle=solid}
 \treelinewidth=.5pt
-{% endtree %}
+```
 
 > = ταχύς ὁ ἀνήρ τρέχει or ὁ ἀνήρ ταχύς τρέχει
 
@@ -2600,15 +2600,15 @@ otherwise to the adjective. This means that the dependency structure
 distinguishes between _ὁ ταχὺς ἀνήρ_ and _ἀνήρ ὁ
   ταχύς_:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\\scriptgr{τρέχει} [.SUB\\\scriptgr{ἀνήρ}  [.ATR\\\scriptgr{ταχύς} [.Aux\\\scriptgr{ὁ} ] ] ] ] ]
-{% endtree %}
+```
 
 > ἀνήρ ὁ ταχύς τρέχει
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\\scriptgr{τρέχει} [.SUB\\\scriptgr{ἀνήρ} [.Aux\\\scriptgr{ὁ} ]   [.ATR\\\scriptgr{ταχύς} ] ] ] ]
-{% endtree %}
+```
 
 > ὁ ταχὺς ἀνήρ τρέχει
 
@@ -2616,17 +2616,17 @@ In the final case, there is an article preceding both the noun and the
 adjective and we attach each one to the element to their right.
 _ὁ ἀνήρ ὁ ταχὺς τρέχει_ ends up as:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\\scriptgr{τρέχει} [.SUB\\\scriptgr{ἀνήρ} [.Aux\\\scriptgr{ὁ} ] [.ATR\\\scriptgr{ταχύς} [.Aux\\\scriptgr{ὁ} ] ] ] ] ]
-{% endtree %}
+```
 
 However, the modifier in an NP need not be an adjective; it can be a
 genitive NP, an adverb etc. We attach the article to that element of
 the modifier which is related to the noun via ATR:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\\scriptgr{ἐστίν} [.SUB\\\scriptgr{λόγος} [.Aux\\\scriptgr{Ὁ} ] [.ATR\\\scriptgr{σταυροῦ} [.Aux\\\scriptgr{τοῦ} ] [.Aux\\\scriptgr{ὁ} ] ] ] [.Aux\\\scriptgr{γὰρ} ] [.OBL\\\scriptgr{ἀπολλυμένοις} [.Aux\\\scriptgr{τοῖς} ] [.Aux\\\scriptgr{μὲν} ] ] [.XOBJ\\\scriptgr{μωρία} ] ] ]
-{% endtree %}
+```
 
 > Ὁ λόγος γὰρ ὁ τοῦ σταυροῦ τοῖς μὲν ἀπολλυμένοις μωρία ἐστί
 >
@@ -2657,7 +2657,7 @@ adverb/preposition will be the head of the construction and given the
 appropriate relation, and the article will be a dependent of the
 adverb/preposition via Aux:
 
-{% tree %}
+```tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{\scriptgr{ἐξῆλθον}}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
 {\ntnode{Z2}{\scriptgr{παρ’}}{\nodeconnect{Z1}{Z2}\mput*{SUB}},
@@ -2671,7 +2671,7 @@ adverb/preposition via Aux:
 \psset{linestyle=dotted}
 \anodecurve[bl]{x2}[br]{Z2}
 \anodecurve[bl]{x1}[br]{Z2}
-{% endtree %}
+```
 
 > καὶ ἀκούσαντες οἱ παρ’ αὐτοῦ ἐξῆλθον κρατῆσαι αὐτόν
 
@@ -2682,7 +2682,7 @@ the infinitive via Aux, even if it is separated from its infinitive by
 other elements. Here is a rather complicated subtree showing the
 analysis of a preposition + to coordinated articular infinitives:
 
-{% tree %}
+```tree
 \sisterskip=2em
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
@@ -2703,7 +2703,7 @@ analysis of a preposition + to coordinated articular infinitives:
 \treelinewidth=1pt
 \psset{linestyle=dotted}
 \anodecurve[bl]{inf}[br]{to}
-{% endtree %}
+```
 
 > διὰ τὸ αὐτὸν πολλάκις πέδαις καὶ ἁλύσεσιν δεδέσθαι καὶ διεσπάσθαι ὑπ’ αὐτοῦ τὰς ἁλύσεις
 
@@ -2723,7 +2723,7 @@ happens with infinitives. Although we take иже as a
 demonstrative pronoun, we make it an AUX on the infinitive and
 let it nominalize the infinitive:
 
-{% tree %}
+```tree
 \psset{linestyle=solid}
 \treelinewidth=.5pt\daughterskip=4em
 \sisterskip=4em
@@ -2738,7 +2738,7 @@ let it nominalize the infinitive:
 {\ntnode{Z544774}{\ocs{мрътвꙑхъ}}{\nodeconnect{Z544773}{Z544774}\mput*{OBL}}}}}}}
 \treelinewidth=1pt\psset{linestyle=dotted}
 \anodecurve[bl]{Z544770}[bl]{Z544775}
-{% endtree %}
+```
 
 This usage is also found with quotations, see \corref{39165}.
 However, there are also possible cases of the mock article
@@ -2770,16 +2770,16 @@ PRED-relation, see section \ref{multislash}.
 To understand this general principle, consider the sentence
 _Caesar non potuit mingere_. The dependency tree is
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\potuit [.SUB\\Caesar ] [.Aux\\non ] [.XOBJ\\mingere ] ] ]
-{% endtree %}
+```
 
 Caesar is correctly designated as the subject of
 _posse_. However, Caesar is also the subject of
 _mingere_ and to represent this fact, we put a slash arrow from
 _mingere_ to _Caesar_:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{potuit}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -2790,7 +2790,7 @@ _mingere_ to _Caesar_:
 \treelinewidth=1pt
 \psset{linestyle=dotted}
 \anodecurve[tl]{s}[tr]{se}
-{% endtree %}
+```
 
 > Caesar non potuit mingere
 
@@ -2813,9 +2813,9 @@ example _Caesar calvus est_. _Caesar_ is the subject of
 _est_, and _calvus_ is the predicative complement of
 _est_:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\est [.SUB\\Caesar ] [.XOBJ\\calvus ] ] ]
-{% endtree %}
+```
 
 > Caesar calvus est
 
@@ -2826,7 +2826,7 @@ predication about _Caesar_. In other words, _Caesar_ is
 the subject of _calvus_ and this is represented by a slash
 arrow from _calvus_ to _Caesar_:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{est}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -2836,7 +2836,7 @@ arrow from _calvus_ to _Caesar_:
 \psset{linestyle=dotted}
 \treelinewidth=1pt
 \anodecurve[tl]{ss}[tr]{sse}
-{% endtree %}
+```
 
 > Caesar calvus est
 
@@ -2849,7 +2849,7 @@ the same time, _Ciceronem_ is the subject of _consulem_
 and we capture this fact by a slash arrow from _consulem_ to
 _Ciceronem_:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{creaverunt}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -2860,7 +2860,7 @@ _Ciceronem_:
 \psset{linestyle=dotted}
 \treelinewidth=1pt
 \anodecurve[tl]{sss}[tr]{ssse}
-{% endtree %}
+```
 
 > Romani Ciceronem consulem creaverunt
 
@@ -2871,7 +2871,7 @@ contributing the extra information that the 'saying' was 'responding'. So
 _respondens_ is an XADV-daughter of _dixit_, but we also want to express that
 _ille_ is the subject of _respondens_:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{dixit}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -2882,7 +2882,7 @@ _ille_ is the subject of _respondens_:
 \psset{linestyle=dotted}
 \treelinewidth=1pt
 \anodecurve[tl]{ssss}[tr]{sssse}
-{% endtree %}
+```
 
 > Ille dixit eis respondens
 
@@ -2892,7 +2892,7 @@ _respondens dixit eis_? In this case, the subject is supplied
 by the finite verb itself, and the slash arrow is therefore directed
 towards the verb:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{ssssse}{dixit}{\nodeconnect{Z0}{ssssse}\mput*{PRED}},
@@ -2902,7 +2902,7 @@ towards the verb:
 \psset{linestyle=dotted}
 \treelinewidth=1pt
 \anodecurve[r]{sssss}[r]{ssssse}
-{% endtree %}
+```
 
 > Dixit eis respondens
 
@@ -2938,13 +2938,13 @@ scoping information that is expressed in other ways in constituent
 coordination. In section \ref{concoord} we represented adjectives
 scoping over two coordinated nouns as in (b) below:
 
-{% tree %}
+```tree
 \Tree [.SUB\\et [.SUB\\uiri [.ATR\\boni ] ] [.SUB\\ciues ] ]
-{% endtree %}
+```
 
-{% tree %}
+```tree
 \Tree [.SUB\\et [.ATR\\boni ] [.SUB\\uiri ] [.SUB\\ciues ] ]
-{% endtree %}
+```
 
 Theoretically, it would be possible to represent _Caesar edit et bibit_ by
 coordinating the two verbs under the conjunction and then attach _Caesar_ as a
@@ -2955,7 +2955,7 @@ object daughter, _quod_, and _three_ subject daughters, namely _edit_, _bibit_
 morphological annotation, we prefer to avoid it entirely and represent the
 sentence as:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{erat}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -2971,7 +2971,7 @@ sentence as:
 \anodecurve[b]{piv}[l]{et}
 \anodecurve[b]{verb}[b]{obj}
 \anodecurve[b]{verb}[t]{sub}
-{% endtree %}
+```
 
 > quod Caesar edit et bibit bonum erat
 
@@ -2999,7 +2999,7 @@ indicate subject identity.
 
 Consider again the first example from section \ref{sc}:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{et}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -3014,13 +3014,13 @@ Consider again the first example from section \ref{sc}:
 \psset{linestyle=dotted}
 \treelinewidth=1pt
 \anodecurve[bl]{ssssss}[r]{sssssse}
-{% endtree %}
+```
 
 > Homo indebatur purpura et bysso et epulabatur cotidie
 
 Now consider the example _qui uiuit et aurem habet, audiat_:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{audiat}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -3033,13 +3033,13 @@ Now consider the example _qui uiuit et aurem habet, audiat_:
 \psset{linestyle=dotted}
 \treelinewidth=1pt
 \anodecurve[bl]{vsab}[b]{ssab}
-{% endtree %}
+```
 
 > qui vivit et aurem habet, audiat
 
 The shared \topicword{Shared auxiliaries} element can also be an auxiliary verb:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{0}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -3056,7 +3056,7 @@ The shared \topicword{Shared auxiliaries} element can also be an auxiliary verb:
 \anodecurve[l]{Z6}[r]{Z5}
 \psset{linestyle=solid}
 \treelinewidth=.5pt
-{% endtree %}
+```
 
 > multi autem sunt vocati, pauci vero electi
 
@@ -3074,7 +3074,7 @@ interpret the slash relation. Instead, the slash relation 'inherits'
 the function of the slashee node. As long as this restriction is
 respected, there can be several slashes in a tree:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{et}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -3092,13 +3092,13 @@ respected, there can be several slashes in a tree:
 \treelinewidth=1pt
 \anodecurve[bl]{ster}[r]{al}
 \anodecurve[bl]{ster}[r]{fr}
-{% endtree %}
+```
 
 > alii autem frondes  de arboribus et sternebant in via
 
 We can even have many more arrows:
 
-{% tree %}
+```tree
 \label{multiarrow}
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{\scriptgr{καὶ}}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -3115,7 +3115,7 @@ We can even have many more arrows:
 \anodecurve[bl]{apest}[r]{lab}
 \anodecurve[r]{kenon}[r]{apest}
 \anodecurve[l]{apest}[r]{auton}
-{% endtree %}
+```
 
 > καὶ λαβόντες αὐτὸν ἔδειραν καὶ ἀπέστειλαν κενόν
 
@@ -3155,7 +3155,7 @@ sentence coordination, except that there is also a slash arrow from
 the empty node representing the verb, to the overt verb.[^3] Consider
 _tradet frater fratrem in mortem et pater filium_:
 
-{% tree %}
+```tree
 \label{mors}
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
@@ -3173,7 +3173,7 @@ _tradet frater fratrem in mortem et pater filium_:
 \treelinewidth=1pt
 \anodecurve[l]{empty}[r]{verbh}
 \anodecurve[l]{empty}[r]{oblh}
-{% endtree %}
+```
 
 > tradet frater fratrem in mortem et pater filium
 
@@ -3264,9 +3264,9 @@ represent in a syntax without empty nominal elements. Instead we have
 opted to take _omnes_ as the subject in such cases. The same holds for
 _ipse_ 'self' in cases like the following:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\dixit [.Aux\\autem ] [.SUB\\ipse ] [.OBL\\illis ] ] ]
-{% endtree %}
+```
 
 > ipse autem dixit illis
 >
@@ -3284,7 +3284,7 @@ subjects when they really are not. This leads to some complications
 whenever the intensifier/quantifier appears in an open predication,
 i.e.\ a structure which should not have a subject:
 
-{% tree %}
+```tree
 \tree{\ntnode{Z0}{root}{},
 {\ntnode{Z377217}{adsumpserunt}{\nodeconnect{Z0}{Z377217}\mput*{PRED}},
 {\ntnode{Z377212}{autem}{\nodeconnect{Z377217}{Z377212}\mput*{AUX}}},
@@ -3299,7 +3299,7 @@ i.e.\ a structure which should not have a subject:
 \anodecurve[tr]{Z377213}[bl]{Z377216}
 \psset{linestyle=solid}
 \treelinewidth=.5pt
-{% endtree %}
+```
 
 When interpreting such structures, it should be born in mind that 'self'
 and 'all' are not normal subjects.
@@ -3334,9 +3334,9 @@ Ablatives of comparison in Latin, and the similar genitives of
 comparison in Greek and Old Church Slavonic, are dependent on the
 comparative adjective via OBL:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\sunt [.ADV\\nobis ] [.XOBJ\\clariora [.OBL\\luce ] ] [.SUB\\consilia [.ATR\\luce ] [.ATR\\omnia ] ] ] ]
-{% endtree %}
+```
 
 > luce sunt clariora nobis tua consilia omnia
 >
@@ -3346,9 +3346,9 @@ When _quam_ is used it should depend on the comparative
 adjective via OBL, and the second member should depend on
 _quam_ via the same relation as the other item compared:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\est [.XOBJ\\laetior [.OBL\\quam [.SUB\\puer ] ] ] [.SUB\\puella ] ] ]
-{% endtree %}
+```
 
 > puella est laetior quam puer
 
@@ -3358,23 +3358,23 @@ Other expressions of comparison are analysed in the same way:
 _nihil aliud nisi_, _idem qui_, _similis ac_
 etc. Here is an example:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\scio [.OBJ\\sensisse [.SUBJ\\Caesarem ] [.OBJ\\eadem [.AUX\\non ] [.OBL\\quae [.SUBJ\\me ] ] ] ] ] ]
-{% endtree %}
+```
 
 > Caesarem non eadem quae me sensisse scio
 
 We use the same principle for comparative adverbs.
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\amat [.SUB\\Brutus ] [.OBJ\\Caesarem ] [.ADV\\plus [.OBL\\quam [.OBJ\\Augustum ] ] ] ] ]
-{% endtree %}
+```
 
 > Brutus amat Caesarem plus quam Augustum
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\amat [.SUB\\Brutus ] [.OBJ\\Caesarem ] [.ADV\\plus [.OBL\\quam [.SUB\\Augustus ] ] ] ] ]
-{% endtree %}
+```
 
 > Brutus amat Caesarem plus quam Augustus
 
@@ -3382,7 +3382,7 @@ This approach is tantamount to treating _quam_ (as well as _nisi_ in _nihil aliu
 
 Here is another example where _nisi_ modifies an interrogative pronoun:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{potest}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -3398,7 +3398,7 @@ Here is another example where _nisi_ modifies an interrogative pronoun:
 \anodecurve[l]{Z6}[r]{Z2}
 \psset{linestyle=solid}
 \treelinewidth=.5pt
-{% endtree %}
+```
 
 > quis potest dimittere peccata nisi solus Deus
 >
@@ -3406,7 +3406,7 @@ Here is another example where _nisi_ modifies an interrogative pronoun:
 
 If there is no 'antecedent' to _nisi_, it will bear a sentence-level function:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{manducavit}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -3422,7 +3422,7 @@ If there is no 'antecedent' to _nisi_, it will bear a sentence-level function:
 \anodecurve[r]{Z4}[l]{Z6}
 \psset{linestyle=solid}
 \treelinewidth=.5pt
-{% endtree %}
+```
 
 > manducavit panes quos non licet manducare nisi sacerdotibus
 
@@ -3431,11 +3431,11 @@ _velut_ and Gothic _swa_) are treated in the same way. On the
 sentence level they are often adverbs (as in the following example)
 or predicative complements (\ref{velutpredcomp}):
 
-{% tree %}
+```tree
 \Tree [.root [.PRED\\intrabit [.SUB\\receperit [.SUB\\quisque ] [.Aux\\non ] [.ADV\\velut [.SUB\\parvulus ] ] [.OBJ\\regnum [.ATR\\Dei ] ] ] [.Aux\\non ] [.OBL\\in [.OBL\\illud ] ] ] ]
-{% endtree %}
+```
 
-{% tree %}
+```tree
 \label{velutpredcomp}
 \psset{linestyle=solid}
 \treelinewidth=.5pt\daughterskip=4em
@@ -3450,7 +3450,7 @@ or predicative complements (\ref{velutpredcomp}):
 {\ntnode{Z161294}{pastorem}{\nodeconnect{Z161293}{Z161294}\mput*{OBJ}}}}}}}}
 \treelinewidth=1pt\psset{linestyle=dotted}
 \anodecurve[bl]{Z161290}[br]{a}
-{% endtree %}
+```
 
 > Homines erant sicut oves non habentes pastorem
 >
@@ -3480,13 +3480,13 @@ which are then taken as AUX'es. In Slavic this is always an AUX on the
 numeral, if there is one, whereas in the other languages we try to put it
 on the the head of the phrase being modified:
 
-{% tree %}
+```tree
 \Tree [.\scriptgr{ἐτῶν} [.Aux\\\scriptgr{ὡς} ] [.ATR\\\scriptgr{δώδεκα} ] ]
-{% endtree %}
+```
 
-{% tree %}
+```tree
 \Tree [.\ocs{лѣтоу} [.ATR\\\ocs{дъвою} [.Aux\\\ocs{ѣко} ] [.ATR\\\ocs{на} [.OBL\\\ocs{ десѧте } ] ] ] ]
-{% endtree %}
+```
 
 The situation in Gothic and Latin is unresolved.
 
@@ -3543,7 +3543,7 @@ It is often difficult to determine the correct scope of time and space
 adverbials, especially when they co-occur with participles or subordinate
 clauses at the beginning of the sentence.
 
-{% tree %}
+```tree
 \tree{\ntnode{Z0}{root}{},
 {\ntnode{Z290955}{introivit}{\nodeconnect{Z0}{Z290955}\mput*{PRED}},
 {\ntnode{Z290951}{surgens}{\nodeconnect{Z290955}{Z290951}\mput*{XADV}},
@@ -3555,7 +3555,7 @@ clauses at the beginning of the sentence.
 {\ntnode{Z290958}{Simonis}{\nodeconnect{Z290957}{Z290958}\mput*{ATR}}}}}}}
 \treelinewidth=1pt\psset{linestyle=dotted}
 \anodecurve[tr]{Z290951}[br]{Z290955}
-{% endtree %}
+```
 
 > surgens autem de synagoga introivit in domum Simonis
 >
@@ -3588,7 +3588,7 @@ XOBJs, depending on whether an accusative subject would be possible or
 not. For example _licet_ takes a dative and an infinitive. This
 becomes:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{licet}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -3599,13 +3599,13 @@ becomes:
 \treelinewidth=1pt
 \psset{linestyle=dotted}
 \anodecurve[l]{Z2}[r]{se}
-{% endtree %}
+```
 
 > licet viro dimittere uxorem
 
 This means that whenever no dative is present, there should be a slash to the main verb:
 
-{% tree %}
+```tree
 \label{imperswosubject}
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{oportet}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -3613,16 +3613,16 @@ This means that whenever no dative is present, there should be a slash to the ma
 \treelinewidth=1pt
 \psset{linestyle=dotted}
 \anodecurve[r]{Z2}[r]{Z1}
-{% endtree %}
+```
 
 > oportet fieri
 
 On the other hand, such verbs can often also be constructed with an
 Accusative with infinitive, and in such cases, they must be COMPs:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\oportet [.COMP\\praedicari [.SUB\\evangelium ] [.ADV\\in [.OBL\\gentes [.ATR\\omnes ] ] ] ] ] ]
-{% endtree %}
+```
 
 > in omnes gentes oportet praedicari evangelium
 
@@ -3641,14 +3641,14 @@ be described as a periphrastic form. However, despite the regularity
 of the construction, we have chosen to treat it as if the copula had
 its full force:
 
-{% tree %}
+```tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{erat}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
 {\ntnode{Z2}{docens}{\nodeconnect{Z1}{Z2}\mput*{XOBJ}}}}}
 \treelinewidth=1pt
 \psset{linestyle=dotted}
 \anodecurve[r]{Z2}[r]{Z1}
-{% endtree %}
+```
 
 > erat docens
 
@@ -3664,7 +3664,7 @@ often be XADVs, fulfilling an adverbial role in the sentence. This
 goes both for instrumental ablative gerunds and final genitive
 gerunds:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{audiat}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -3676,7 +3676,7 @@ gerunds:
 \treelinewidth=1pt
 \psset{linestyle=dotted}
 \anodecurve[bl]{ger}[br]{qui}
-{% endtree %}
+```
 
 > qui habet aures audiendi, audiat
 
@@ -3684,7 +3684,7 @@ However, gerunds are also very often embedded in a preposition
 phrase. In such cases, the preposition serves as an ADV, while the
 gerund is an OBL of the preposition with a slash to its subject:
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{laborant}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -3695,7 +3695,7 @@ gerund is an OBL of the preposition with a slash to its subject:
 \treelinewidth=1pt
 \psset{linestyle=dotted}
 \anodecurve[r]{rem}[bl]{disc}
-{% endtree %}
+```
 
 > discipuli in remigando laborant
 
@@ -3708,9 +3708,9 @@ towards the slashee node should be as small as possible.
 
 Ablative gerunds are also typically ADVs:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\cavat [.SUB\\gutta ]  [.OBJ\\lapidem ] [.ADV\\sed [.ADV\\ui [.Aux non ] ] [.ADV\\cadendo [.ADV saepe ] ] ] ] ]
-{% endtree %}
+```
 
 > gutta cavat lapidem non vi sed saepe cadendo
 
@@ -3732,7 +3732,7 @@ still be as local as possible - the number of nodes one must go
 upwards from the NARG/OBL slasher node before one descends towards the
 slashee node should be as small as possible.
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{\scriptgr{ἔχει} }{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -3744,7 +3744,7 @@ slashee node should be as small as possible.
 \anodecurve[r]{Z3}[r]{Z2}
 \psset{linestyle=solid}
 \treelinewidth=.5pt
-{% endtree %}
+```
 
 > ἔχει χρείαν νίψασθαι
 
@@ -3757,7 +3757,7 @@ Furthermore, infinitives are often found in positions where it could
 be analysed as a subject. However, we have chosen to treat it as a
 COMP 'across the board', in order to avoid complicated choices:
 
-{% tree %}
+```tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{est}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
 {\ntnode{eee}{et}{\nodeconnect{Z1}{eee}\mput*{XOBJ}},
@@ -3771,7 +3771,7 @@ COMP 'across the board', in order to avoid complicated choices:
 \anodecurve[r]{eee}[l]{mmm}
 \psset{linestyle=solid}
 \treelinewidth=.5pt
-{% endtree %}
+```
 
 > dulce et decorum est pro patria mori
 
@@ -3780,9 +3780,9 @@ COMP 'across the board', in order to avoid complicated choices:
 Note that the reflexive marker with OCS and Gothic reflexive verbs is
 analysed as Aux:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\\ocs{каите} [.Aux\\\ocs{сѧ} ] ] ]
-{% endtree %}
+```
 
 Reflexive clitics can sometimes occur in the dative instead of the
 accusative; they are still aux'es.
@@ -3805,20 +3805,20 @@ Note that it is not always easy to determine whether a dative-marked
 nominal is adverbal or adnominal, particularly in constructions which
 can be perceived as predicative possession:
 
-{% tree %}
+```tree
 \label{money}
 \ocs{ꙇ тръжьникомъ расꙑпа пѣнѧѕꙑ} (John 2:15)
-{% endtree %}
+```
 
-{% tree %}
+```tree
 \label{name1}
 \ocs{како ти естъ имѧ}
-{% endtree %}
+```
 
-{% tree %}
+```tree
 \label{name2}
 \ocs{и имѧ еи елисаветъ} (Luke 1:5)
-{% endtree %}
+```
 
 Our rule of thumb is that if the construction contains a (possibly
 null) copula and can be perceived as a predicative possessive
@@ -3865,13 +3865,13 @@ appropriate case. When it is not introduced by _καλούμενος_
 or a similar verb, it is is simply an apposition to its noun,
 eventually with _ὀνόματι_ as its own attribute:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\\scriptgr{ἔρχεται} [.SUB\\\scriptgr{εἷς}  [.PART\\\scriptgr{ἀρχισυναγώγων} [.Aux\\\scriptgr{τῶν} ] ]  [.APOS\\\scriptgr{Ἰάειρος} [.ATR\\\scriptgr{ὀνόματι} ] ] ] ] ]
-{% endtree %}
+```
 
 > ἔρχεται εἷς τῶν ἀρχισυναγώγων, ὀνόματι Ἰάειρος
 
-{% tree %}
+```tree
 %%% begin tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{\scriptgr{ἤλθομεν}  }{\nodeconnect{Z0}{Z1}\mput*{PRED}},
@@ -3887,7 +3887,7 @@ eventually with _ὀνόματι_ as its own attribute:
 \anodecurve[r]{X}[r]{A}
 \psset{linestyle=solid}
 \treelinewidth=.5pt
-{% endtree %}
+```
 
 > ἤλθομεν εἰς τόπον τινὰ καλούμενον Καλοὺς λιμένας
 
@@ -3944,9 +3944,9 @@ Often, however, the subjunction is lacking. We still treat these
 sentences as COMP dependents, no different from other substantival
 clauses without subjunction:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\.factum [.Aux\\est ] [.Aux\\autem ] [.COMP\\exiit [.SUB\\edictum ] [.OBL\\a [.OBL\\Augusto [.APOS\\Caesare ] ] ] ] ] ]
-{% endtree %}
+```
 
 However, we sometimes find _factum est...et..._V. Here we coordinate the V with _factum est_.
 
@@ -3961,9 +3961,9 @@ the first two apart: both complements ('a doctor') and ('in London')
 are considered XOBJs. But the existence verb is treated
 differently: here there is in fact no complement, only an adverbial:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\erant [.Aux\\autem ] [.ADV\\in [.OBL\\ecclesia ] ] [.SUB\\et [.SUB\\prophetae ] [.SUB\\doctores ] ] ] ]
-{% endtree %}
+```
 
 > erant autem in ecclesia propheta et doctores
 
@@ -3982,15 +3982,15 @@ be an ATR-dependent of a noun, or bear a nominal function itself. The
 first example shows _sa_ as an article, the second _sa_
 as a demonstrative pronoun:
 
-{% tree %}
+```tree
 \Tree [.ATR\\gu\th{}s [.ATR\\audagins ] [.Aux\\\th{}is ] ]
-{% endtree %}
+```
 
 > \th{}is audagins gu\th{}s
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\sildaleikidedun [.OBL\\ana [.OBL\\þamma ] ] ] ]
-{% endtree %}
+```
 
 > sildaleikidedun ana þamma
 
@@ -3999,15 +3999,15 @@ Gothic _sa_ can be used to nominalize adverbs or prepositions,
 in which case it is made an Aux-dependent on the head of the adverbial
 element:
 
-{% tree %}
+```tree
 \Tree [.OBJ\\attan [.ATR\\izwarana ] [.ATR\\in [.OBL\\himinam ] [.Aux \th{}ana ] ] ]
-{% endtree %}
+```
 
 > attan izwarana \th{}ana in himinam
 
-{% tree %}
+```tree
 \Tree [.ADV\\fram [.OBL\\nu [.Aux\\himma ] ] ]
-{% endtree %}
+```
 
 > fram himma nu
 
@@ -4024,15 +4024,15 @@ In many cases, Greek (and sometimes the translations) have a
 pleonastic _αὐτός_ which picks up the reference of a full
 lexical noun phrase. A typical example is:
 
-{% tree %}
+```tree
 \scriptgr{τοῦ δὲ μὴ ἔχοντος, καὶ ὃ ἔχει ἀρθήσεται ἀπ’ αὐτοῦ.}
-{% endtree %}
+```
 
 αὐτοῦ carries the syntactic function in the sentence, whereas τοῦ δὲ μὴ ἔχοντος
 supplies the semantics. This is analysed by having τοῦ δὲ μὴ ἔχοντος be an
 apposition on αὐτοῦ:
 
-{% tree %}
+```tree
 \tree{\ntnode{Z0}{root}{},
 {\ntnode{Z284348}{\scriptgr{ἀρθήσεται}}{\nodeconnect{Z0}{Z284348}\mput*{PRED}},
 {\ntnode{Z284341}{\scriptgr{δὲ}}{\nodeconnect{Z284348}{Z284341}\mput*{AUX}}},
@@ -4044,13 +4044,13 @@ apposition on αὐτοῦ:
 {\ntnode{Z284343}{\scriptgr{ἔχοντος}}{\nodeconnect{Z284350}{Z284343}\mput*{APOS}},
 {\ntnode{Z284340}{\scriptgr{τοῦ}}{\nodeconnect{Z284343}{Z284340}\mput*{AUX}}},
 {\ntnode{Z284342}{\scriptgr{μὴ}}{\nodeconnect{Z284343}{Z284342}\mput*{AUX}}}}}}}}
-{% endtree %}
+```
 
 We use the same analysis for relative clauses with resumptive
 pronouns: _αὐτός_ gets the grammatical function, and the
 relative pronoun is an apposition on it:
 
-{% tree %}
+```tree
 \sisterskip=4em
 \tree{
 \ntnode{Z495788}{\scriptgr{ὄχλος}}{},
@@ -4062,7 +4062,7 @@ relative pronoun is an apposition on it:
 {\ntnode{Z495794}{\scriptgr{οὐδεὶς}}{\nodeconnect{Z495795}{Z495794}\mput*{SUB}}}}}
 \treelinewidth=1pt\psset{linestyle=dotted}
 \anodecurve[tr]{Z495792}[bl]{Z495794}
-{% endtree %}
+```
 
 > ὄχλος πολύς, ὃν ἀριθμῆσαι αὐτὸν οὐδεὶς ἐδύνατο}
 >
@@ -4077,7 +4077,7 @@ clause which is picked up by an _αὐτός_ in the main
 clause. We analyse these as non-restrictive relative clauses on
 _αὐτός_:
 
-{% tree %}
+```tree
 \psset{linestyle=solid}
 \treelinewidth=.5pt\daughterskip=4em
 \sisterskip=4em
@@ -4087,7 +4087,7 @@ _αὐτός_:
 {\ntnode{Z104243}{\scriptgr{αὐτῷ}}{\nodeconnect{Z104242}{Z104243}\mput*{OBL}},
 {\ntnode{Z104240}{\scriptgr{ἔχει}}{\nodeconnect{Z104243}{Z104240}\mput*{APOS}},
 {\ntnode{Z104238}{\scriptgr{ὃς}}{\nodeconnect{Z104240}{Z104238}\mput*{SUB}}}}}}}
-{% endtree %}
+```
 
 The same analysis is used whenever the fronted constituent is not a
 relative clause, but a normal NP.
@@ -4099,7 +4099,7 @@ absolutive constructions are sometimes introduced by _at_ and
 _du_. These are taken as aux-dependents of the verbal head of
 the construction:
 
-{% tree %}
+```tree
 \tree{\ntnode{Z0}{root}{},
 %{\ntnode{Z553860}{sai}{\nodeconnect{Z0}{Z553860}\mput*{VOC}}},
 {\ntnode{Z553862}{urrann}{\nodeconnect{Z0}{Z553862}\mput*{PRED}},
@@ -4111,7 +4111,7 @@ the construction:
 {\ntnode{Z553868}{seinamma}{\nodeconnect{Z553867}{Z553868}\mput*{ATR}}}}}}}
 \treelinewidth=1pt\psset{linestyle=dotted}
 \anodecurve[bl]{Z553866}[br]{Z553864}
-{% endtree %}
+```
 
 Exactly analogous is the treatment of _at_ + absolutive
 construction e.g. in \corref{37757}. Note that when there is only one
@@ -4142,13 +4142,13 @@ something we are talking about.
 
 Dependents on pronouns and nouns therefore often become ATRs:
 
-{% tree %}
+```tree
 \tree{\ntnode{Z0}{root}{},
 {\ntnode{Z293264}{habeo}{\nodeconnect{Z0}{Z293264}\mput*{PRED}},
 {\ntnode{Z293266}{aliquid}{\nodeconnect{Z293264}{Z293266}\mput*{OBJ}},
 {\ntnode{Z293267}{dicere}{\nodeconnect{Z293266}{Z293267}\mput*{ATR}},
 {\ntnode{Z293265}{tibi}{\nodeconnect{Z293267}{Z293265}\mput*{OBL}}}}}}}
-{% endtree %}
+```
 
 Dependents of adjectives is a somewhat more complicated matter: many
 adjectives such as _dignus_, _ἄξιος_
@@ -4156,7 +4156,7 @@ etc. _require_ an infinitive or a subordinate clause. The
 infinitive therefore becomes an OBL, or a COMP if it is a full
 accusative with infinitive construction:
 
-{% tree %}
+```tree
 \psset{linestyle=solid}
 \treelinewidth=.5pt
 \tree{\ntnode{Z0}{root}{},
@@ -4172,7 +4172,7 @@ accusative with infinitive construction:
 \anodecurve[tr]{Z299559}[br]{Z299558}
 \psset{linestyle=solid}
 \treelinewidth=.5pt
-{% endtree %}
+```
 
 But note that adjectives also can take infinitives that are ADVs, such
 as in the 'easy to read' construction.
@@ -4194,7 +4194,7 @@ takes place. The person affected by the event may surface as a dative
 (in Greek) or as a prepositional phrase (_de_ in Latin, _bi_
 in Gothic). We take these expressions as OBLs.
 
-{% tree %}
+```tree
 %\corref{6668}, \corref{6731} %uren ånd og griser gresk
 \psset{linestyle=solid}
 \treelinewidth=.5pt\daughterskip=4em
@@ -4216,9 +4216,9 @@ in Gothic). We take these expressions as OBLs.
 {\ntnode{Z104862}{\scriptgr{τῶν}}{\nodeconnect{Z104863}{Z104862}\mput*{AUX}}}}}}}}
 \treelinewidth=1pt\psset{linestyle=dotted}
 \anodecurve[tr]{Z678331}[br]{Z104852}
-{% endtree %}
+```
 
-{% tree %}
+```tree
 %\corref{37612} %griser gotisk
 \psset{linestyle=solid}
 \treelinewidth=.5pt\daughterskip=4em
@@ -4239,9 +4239,9 @@ in Gothic). We take these expressions as OBLs.
 {\ntnode{Z554866}{sweina}{\nodeconnect{Z554864}{Z554866}\mput*{OBL}},
 {\ntnode{Z554865}{\th{}o}{\nodeconnect{Z554866}{Z554865}\mput*{AUX}}}}}}}}}
 \treelinewidth=1pt\psset{linestyle=dotted}
-{% endtree %}
+```
 
-{% tree %}
+```tree
 %\corref{10576} %griser latin%
 %NB feilkuttet eksempel, resten av setningen må med FIKS!
 \sisterskip=3.5em
@@ -4258,7 +4258,7 @@ in Gothic). We take these expressions as OBLs.
 {\ntnode{Z160341}{daemonium}{\nodeconnect{Z160342}{Z160341}\mput*{OBJ}}}}},
 {\ntnode{Z160344}{de}{\nodeconnect{Z160343}{Z160344}\mput*{OBL}},
 {\ntnode{Z160345}{porcis}{\nodeconnect{Z160344}{Z160345}\mput*{OBL}}}}}}}}
-{% endtree %}
+```
 
 ### 'if not' -- _εἰ δὲ μή_
 
@@ -4285,9 +4285,9 @@ different cases to distinguish:
 In the first case, the COMP and the OBJ should simply be coordinated
 and the coordinating node should be given the OBJ relation:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\viderunt [.SUB\\mulieres ] [.OBJ\\et [.OBJ\\monumentum ] [.COMP\\positum [.Aux\\erat ] [.ADV\\quemadmodum ] [.SUB\\corpus [.ATR\\eius ] ] ] ] ] ]
-{% endtree %}
+```
 
 > viderunt mulieres monumentum et quemadmodum positum erat corpus eius
 >
@@ -4298,7 +4298,7 @@ the COMP we have a different construction ('prolepsis' in traditional
 grammar) and here we make both the OBJ and the COMP directly dependent
 on the verb without any coordination:
 
-{% tree %}
+```tree
 \tree{\ntnode{Z0}{root}{},
 {\ntnode{Z290887}{scio}{\nodeconnect{Z0}{Z290887}\mput*{PRED}},
 {\ntnode{Z290888}{te}{\nodeconnect{Z290887}{Z290888}\mput*{OBJ}}},
@@ -4308,7 +4308,7 @@ on the verb without any coordination:
 \anodecurve[tr]{Z290889}[br]{Z290890}
 \psset{linestyle=solid}
 \treelinewidth=.5pt
-{% endtree %}
+```
 
 > Scio te qui sis
 >
@@ -4323,7 +4323,7 @@ subject of the complement clause.
 Sometimes a question is asked with alternatives to choose between, as
 in 'Who is the better one, me or my brother?'. In these cases, the alternatives are taken as appositions on the question-word:
 
-{% tree %}
+```tree
 \tree{\ntnode{Z0}{root}{},
 {\ntnode{Z312148}{rabbi}{\nodeconnect{Z0}{Z312148}\mput*{VOC}}},
 {\ntnode{Z312150}{peccavit}{\nodeconnect{Z0}{Z312150}\mput*{PRED}},
@@ -4339,7 +4339,7 @@ in 'Who is the better one, me or my brother?'. In these cases, the alternatives 
 \anodecurve[tr]{Z312156}[br]{Z312157}
 \psset{linestyle=solid}
 \treelinewidth=.5pt
-{% endtree %}
+```
 
 ## General issues
 
@@ -4390,9 +4390,9 @@ adverbials are typically OBLs and not ADVs when they appear with
 these can sometimes take a position ADV. Consider the following
 interesting example:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\sedebant [.ADV\\in [.OBL\\synagogis ] ] [.OBL\\in [.OBL\\cathedris [.ATR\\primis ] ] ] ] ]
-{% endtree %}
+```
 
 > in synagogis sedebant in cathedris primis
 
@@ -4410,9 +4410,9 @@ other hand, can only appear with a subset of verbs - mostly motion
 verbs - therefore they are arguments of their verbs. Sometimes both a
 source and a goal appears in a sentence, and both are OBLs:
 
-{% tree %}
+```tree
 \Tree [.Root [.PRED\\\scriptgr{ἤρχοντο} [.OBL\\\scriptgr{πρὸς} [.OBL\\\scriptgr{αὐτὸν} ] ] [.OBL\\\scriptgr{πάντοθεν} ] ] ]
-{% endtree %}
+```
 
 > ἤρχοντο πρὸς αὐτὸν πάντοθεν
 
@@ -4509,7 +4509,7 @@ _posse_, _coepi_, _velle_ and others, which demand a complement
 infinitive (and this infinitive cannot take its own subject). However,
 other verbs can also take an infinitive argument:
 
-{% tree %}
+```tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{praevenit}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
 {\ntnode{Z2}{unguere}{\nodeconnect{Z1}{Z2}\mput*{XOBJ}},
@@ -4517,11 +4517,11 @@ other verbs can also take an infinitive argument:
 {\ntnode{Z4}{meum}{\nodeconnect{Z3}{Z4}\mput*{OBJ}}}},
 {\ntnode{Z5}{in}{\nodeconnect{Z2}{Z5}\mput*{ADV}},
 {\ntnode{Z6}{sepulturam{\nodeconnect{Z5}{Z6}\mput*{OBL}}}}}}}}
-{% endtree %}
+```
 
 > praevenit unguere corpus meum in sepulturam
 
-{% tree %}
+```tree
 \tree{\ntnode{Z0}{Root}{},
 {\ntnode{Z1}{potest}{\nodeconnect{Z0}{Z1}\mput*{PRED}},
 {\ntnode{Z2}{Deus}{\nodeconnect{Z1}{Z2}\mput*{SUB}}},
@@ -4535,7 +4535,7 @@ other verbs can also take an infinitive argument:
 \psset{linestyle=dotted}
 \anodecurve[l]{Z3}[r]{Z2}
 \anodecurve[l]{Z7}[r]{Z6}
-{% endtree %}
+```
 
 > deus potest iudicare
 
@@ -4548,7 +4548,7 @@ govern their subject). For this reason, we treat traditional
 predicative complements as XOBJs. A notable case which often appears
 is the accusative with participle construction:
 
-{% tree %}
+```tree
 \psset{linestyle=solid} \treelinewidth=.5pt
 \tree{\ntnode{Z4}{Root}{},
 {\ntnode{Z5}{vidi}{\nodeconnect{Z4}{Z5}\mput*{PRED}},
@@ -4558,7 +4558,7 @@ is the accusative with participle construction:
 \treelinewidth=1pt
 \psset{linestyle=dotted}
 \anodecurve[l]{Z7}[r]{Z6}
-{% endtree %}
+```
 
 ### Empty nodes
 

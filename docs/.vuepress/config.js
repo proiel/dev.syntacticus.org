@@ -27,5 +27,8 @@ module.exports = {
       { text: 'Development guide', link: '/development-guide/' },
       { text: 'Treebank browser', link: 'http://syntacticus.org' }
     ]
-  }
+  },
+  plugins: [
+    require('./test.plugin.js')
+  ]
 }

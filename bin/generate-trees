@@ -1,0 +1,73 @@
+#!/use/bin/env ruby
+# This requires a functional installation of LaTeX and poppler (pdftocairo)
+require 'digest/sha1'
+
+TEX_TEMPLATE = %w{
+\documentclass[dvips]{standalone}
+\newenvironment{example}{}{}%
+\usepackage{pstricks}
+\usepackage{qtree}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[LGR,T2D,T1]{fontenc}
+%\usepackage[oxonia]{gresk}
+\newcommand{\scriptgr}[1]{\bgroup\fontencoding{LGR}\fontfamily{fof}\selectfont#1\egroup}%
+\usepackage{tree-dvips}
+\usepackage{lingtrees}
+\usepackage{textcomp}
+\newcommand\ocs[1]{\bgroup\fontencoding{T2D}\selectfont#1\egroup}
+%\DeclareUnicodeCharacter{42567}{\i}
+%\DeclareUnicodeCharacter{42577}{ы}
+%\DeclareUnicodeCharacter{1072}{\cyraz}
+\newcommand{\extree}[1]{\Tree[#1]}
+\newcommand{\topicword}[1]{}
+\usepackage{tipa}
+\begin{document}
+\daughterskip=4em
+\sisterskip=4em
+}
+
+def render(context)
+  content = "\n" + context.join("\n") + "\n"
+  hash = Digest::SHA1.hexdigest(content)
+  output_filename = "docs/.vuepress/public/assets/img/#{hash}.svg"
+
+  olddir = Dir.pwd
+  begin
+    Dir.chdir('texmf')
+
+    File.open('tmp.tex', 'w') do |f|
+      f.puts TEX_TEMPLATE.join("\n")
+      f.puts content
+      f.puts '\end{document}'
+    end
+
+    system('latex tmp')
+    system('dvips tmp')
+    system('ps2pdf tmp.ps')
+  ensure
+    Dir.chdir(olddir)
+  end
+
+  system("pdftocairo -svg texmf/tmp.pdf #{output_filename}")
+end
+
+Dir['docs/annotation-guide/*md'].each do |filename|
+  block = nil
+  File.open(filename).each_line do |l|
+    l.chomp!
+
+    case l
+    when /^\s*```tree\s*$/
+      block = []
+    when /^\s*```\s*$/
+      render(block) if block
+      block = nil
+    else
+      block << l if block
+    end
+  end
+  render(block) if block
+end
+
+
