@@ -430,7 +430,7 @@ Lemma uniqueness is therefore determined by the pair (`lemma`, `part-of-speech`)
 
 It is a good idea to number lemmas consecutively but nothing in the model assumes that this is the case.
 
-TODO: `part-of-speech`
+### Part of speech tags
 
 Parts of speech are defined in the annotation schema included in a PROIEL XML file. For ease of reference, the table below gives the default parts of speech for a PROIEL XML 2.1 treebank:
 
@@ -463,6 +463,8 @@ Tag  | Part of speech
 `S-` | article
 `V-` | verb
 `X-` | unassigned
+
+### Morphology tags
 
 TODO: `morphology`
 
