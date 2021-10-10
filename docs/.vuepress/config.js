@@ -20,6 +20,7 @@ module.exports = {
     logo: '/assets/img/logo.png',
     sidebar: 'auto',
     displayAllHeaders: true,
+    smoothScroll: true,
     nav: [
       { text: 'About Syntacticus', link: '/' },
       { text: 'Annotation guide', link: '/annotation-guide/' },
