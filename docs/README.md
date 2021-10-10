@@ -98,3 +98,20 @@ We also provide a toolchain and libraries for reading and manipulate raw treeban
 The definitive reference manual for Syntacticus is the [Annotation guide](/annotation-guide/) and [Development guide](/development-guide/).
 
 If you have questions not covered here you can talk to us on [Gitter](https://gitter.im/proiel/syntacticus) and we will try to reply as soon as possible.
+
+```chart
+{
+  "type": "doughnut",
+  "data": {
+    "datasets": [{
+      "data": [10, 20, 30],
+      "backgroundColor": [
+        "rgba(255, 99, 132)",
+        "rgba(255, 206, 86)",
+        "rgba(54, 162, 235)"
+      ]
+    }],
+    "labels": ["Red", "Yellow", "Blue"]
+  }
+}
+```
