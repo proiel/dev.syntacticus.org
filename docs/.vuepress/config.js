@@ -1,6 +1,15 @@
 module.exports = {
   title: 'Syntacticus',
   description: 'Resources for developers using the Syntacticus treebank',
+  head: [
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: '/assets/img/logo.png'
+      }
+    ],
+  ],
   base: '/',
   themeConfig: {
     repo: 'mlj/syntacticus.org',
