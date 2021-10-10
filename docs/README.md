@@ -80,7 +80,7 @@ The linguistic data you find here is the product of many people's work. Some of 
 
 ## Raw data and developer resources
 
-Raw data can be downloaded from the pages of the constituent treebanks, and some of the data has also been converted to <a href="http://universaldependencies.org/">Universal Dependencies 2.0</a>.
+Raw data can be downloaded from the pages of the constituent treebanks, and some of the data has also been converted to <a href="https://universaldependencies.org/">Universal Dependencies 2.0</a>.
 
 We also provide a toolchain and libraries for reading and manipulate raw treebank data. Some of this is documented in our [Development guide](/development-guide/), and the code is found in our GitHub repositories
 <a href="https://github.com/proiel">https://github.com/proiel</a> and
@@ -88,7 +88,7 @@ We also provide a toolchain and libraries for reading and manipulate raw treeban
 
 | Treebank | Links |
 |----------|-------|
-| PROIEL | <span class="icon"><i class="fa fa-github"></i></span><a href="https://github.com/proiel/proiel-treebank/">Raw data</a>, <a href="http://universaldependencies.org/treebanks/la_proiel/index.html">Latin UD 2.0</a>, <a href="http://universaldependencies.org/treebanks/grc_proiel/index.html">Ancient Greek UD 2.0</a>, <a href="http://universaldependencies.org/treebanks/cu/index.html">Old Church Slavonic UD 2.0</a>, <a href="http://universaldependencies.org/treebanks/got/index.html">Gothic UD 2.0</a> |
+| PROIEL | <span class="icon"><i class="fa fa-github"></i></span><a href="https://github.com/proiel/proiel-treebank/">Raw data</a>, <a href="https://universaldependencies.org/treebanks/la_proiel/index.html">Latin UD 2.0</a>, <a href="https://universaldependencies.org/treebanks/grc_proiel/index.html">Ancient Greek UD 2.0</a>, <a href="https://universaldependencies.org/treebanks/cu/index.html">Old Church Slavonic UD 2.0</a>, <a href="https://universaldependencies.org/treebanks/got/index.html">Gothic UD 2.0</a> |
 | TOROT  | <span class="icon"><i class="fa fa-github"></i></span><a href="https://github.com/torottreebank/">Raw data</a>        |
 | ISWOC  | <span class="icon"><i class="fa fa-github"></i></span><a href="https://github.com/iswoc/iswoc-treebank/">Raw data</a> |
 | Dictionaries | <span class="icon"><i class="fa fa-github"></i></span><a href="https://github.com/proiel/syntacticus-dictionaries/">Raw data</a> |

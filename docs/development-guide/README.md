@@ -14,7 +14,7 @@ Most of the software, as well as the annotation guidelines, were developed by th
 
 Everything related to Syntacticus is open-source and freely available. Most of our software is released under the MIT license; some older parts are GPL licensed. The linguistic data itself and our documenation are available under various CC BY-SA licenses. The details differ between individual resources so check carefully before using. Note in particular that some of our linguistic resources have limitations on commerical use. We also greatly appreciate it if you follow standard academic practice and cite relevant publications if you use any our data.
 
-The _PROIEL treebanking framework_ consists of an [annotation scheme](http://folk.uio.no/daghaug/syntactic_guidelines.pdf), an XML-based [interchange format](../handbook/developer/proielxml) and a set of tools for creating and manipulating treebanks.
+The _PROIEL treebanking framework_ consists of an [annotation scheme](http://dev.syntacticus.org/annotation-guide/), an XML-based interchange format and a set of tools for creating and manipulating treebanks.
 
 The three main tools of the framework are
 
@@ -357,9 +357,9 @@ a `dialect` attribute in PROIEL XML 3.0 or higher.
 | `dictionary` | `language`     | Enumeration, required          | PROIEL XML >= 3.0 |
 | `dictionary` | `dialect`      | Enumeration, optional          | PROIEL XML >= 3.0 |
 
-Language attributes contain an [ISO-639-3](http://www.sil.org/iso639-3/) language tag. All tags defined in the most recent version of the ISO-639-3 standard are valid. See SIL's [ISO-639-3 code table](http://www.sil.org/iso639-3/codes.asp) for a list.
+Language attributes contain an [ISO-639-3](https://iso639-3.sil.org/about) language tag. All tags defined in the most recent version of the ISO-639-3 standard are valid. See SIL's [ISO-639-3 code table](https://iso639-3.sil.org/code_tables/639/data) for a list.
 
-Dialect attributes contain a dialect tag based on those proposed as [LinguistList's extensions](http://linguistlist.org/forms/langs/find-a-language-or-family.cfm#other-code). These can be browsed using [MultiTree](http://new.multitree.org/) and there is a list of language tags for [extinct languages](http://multitree.org/codes/extinct.html). Unfortunately, some of these involve ISO-639-3 tags that have been proposed, but never accepted (e.g. `vsn` for [Vedic Sanskrit](http://www-01.sil.org/iso639-3/chg_detail.asp?id=2011-041&lang=vsn)). PROIEL XML instead using dialect tags and an existing ISO-639-9 tag whenever possible.
+Dialect attributes contain a dialect tag based on those proposed as [LinguistList's extensions](http://linguistlist.org/forms/langs/find-a-language-or-family.cfm#other-code). These can be browsed using [MultiTree](http://new.multitree.org/) and there is a list of language tags for [extinct languages](http://multitree.org/codes/extinct.html). Unfortunately, some of these involve ISO-639-3 tags that have been proposed, but never accepted (e.g. `vsn` for [Vedic Sanskrit](https://iso639-3.sil.org/request/2011-041)). PROIEL XML instead using dialect tags and an existing ISO-639-9 tag whenever possible.
 
 The following is a list of language and dialect tags for which complete or partial support already exists within the toolchain:
 

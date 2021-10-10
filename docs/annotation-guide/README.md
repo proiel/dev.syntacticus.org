@@ -15,7 +15,7 @@ Lexical-Functional Grammar. Much of the scheme is adapted from the
 1.3)](http://nlp.perseus.tufts.edu/syntax/treebank/1.3/docs/guidelines.pdf)
 and its ultimate source, the [_Guidelines for Annotations at Analytical
 Level of the Prague Dependency
-Treebank_](http://ufal.mff.cuni.cz/pdt2.0/doc/manuals/en/a-layer/html/index.html).
+Treebank_](https://ufal.mff.cuni.cz/pdt2.0/doc/manuals/en/a-layer/html/index.html).
 However, there are several important differences that will be adressed in
 a separate document which also discusses questions of conversion.
 
