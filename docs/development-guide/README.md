@@ -466,7 +466,22 @@ Tag  | Part of speech
 
 ### Morphology tags
 
-TODO: `morphology`
+The morphology tags consist of 11 fields encoding different features. The following table shows the globally valid values for each field in order. There are also language-specific restrictions on valid morphology tags.
+
+Field    |  Possible value
+-----|-----------------------------
+person   | `1`, `2`, `3` 
+number   | `d` (dual), `e`(s. or p.), `p` (plural),  `s` (singular), `x` (uncertain)
+tense    | `a` (aorist), `f` (future), `i` (imperfect), `l` (pluperfect), `p` (present),  `r` (perfect), `s` (resultative),  `t` (future perfect), `u` (past), `x` (uncertain)
+mood     | `d` (gerund),  `g` (gerundive), `i` (indicative), `m` (imperative), `n` (infintive), `o` (optative),  `p` (participle), `s` (subjunctive),  `u` (supine), `x` (uncertain)
+voice    | `a` (active),  `e` (middle or passive), `m` (middle), `p` (passive), `x` (uncertain)
+gender   | `f` (feminine), `m` (masculine), `n` (neuter), `o` (m. or n.), `p` (m. or f.), `q` (m., f. or n.), `r` (f. or n.), `x` (uncertain)
+case     | `a` (accusative), `b` (ablative), `c` (genitive or dative), `d` (dative), `e` (acc. or dat.), `g` (genitive), `i` (instrumental),  `k` (nom. or acc.), `l` (locative), `n` (nominative), `o` (oblique),  `v` (vocative), `x` (uncertain), `z` (no case)
+degree   |  `c` (comparative), `p` (positive), `s` (superlative), `x` (uncertain), `z` (no degree)
+strength |   `s` (strong), `t` (weak or strong), `w` (weak)
+inflection | `i` (inflecting), `n` (non-inflecting)
+
+
 
 ## Dependency relations
 
