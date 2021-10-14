@@ -18,7 +18,15 @@ module.exports = {
     editLinks: true,
     lastUpdated: 'Last updated',
     logo: '/assets/img/logo.png',
-    sidebar: 'auto',
+    sidebar: {
+      '/annotation-guide/': 'auto',
+      '/development-guide/': 'auto',
+      '/': [
+        '',
+        'proiel',
+        'iswoc'
+      ]
+    },
     displayAllHeaders: true,
     smoothScroll: true,
     nav: [

@@ -2,7 +2,7 @@
 title: About Syntacticus
 ---
 
-Syntacticus is an umbrella project for the [PROIEL Treebank](https://proiel.github.io/), the [Tromsø Old Russian and OCS Treebank (TOROT)](https://torottreebank.github.io/) and the [Information Structure and Word Order Change in Germanic and Romance Languages (ISWOC) Treebank](https://iswoc.github.io/), which all use the same annotation system and share similar linguistic priorities.
+Syntacticus is an umbrella project for the [PROIEL Treebank](/proiel/), the [Tromsø Old Russian and OCS Treebank (TOROT)](https://torottreebank.github.io/) and the [Information Structure and Word Order Change in Germanic and Romance Languages (ISWOC) Treebank](/iswoc/), which all use the same annotation system and share similar linguistic priorities.
 
 Syntacticus provides easy access to around a million morphosyntactically annotated tokens from 10 early Indo-European languages.
 
@@ -39,7 +39,7 @@ Syntacticus provides easy access to around a million morphosyntactically annotat
 | Old Russian | 235,275  |
 | *Total* | *1,054,796* |
 
-We are constantly adding new material to Syntacticus. The ultimate goal is to have a representative sample of different text types from each branch of early Indo-European. We maintain lists of texts we are working on at the moment, which you can find on the [PROIEL Treebank](https://proiel.github.io/) and the [TOROT Treebank](https://torottreebank.github.io/) pages, but this is extremely time-consuming work so please be patient!
+We are constantly adding new material to Syntacticus. The ultimate goal is to have a representative sample of different text types from each branch of early Indo-European. We maintain lists of texts we are working on at the moment, which you can find on the [PROIEL Treebank](/proiel/) and the [TOROT Treebank](https://torottreebank.github.io/) pages, but this is extremely time-consuming work so please be patient!
 
 The focus for Syntacticus at the moment is to consolidate and edit our documentation so that it is easier to approach. We are very aware that the current documentation is inadequate! But new features and better integration with our development toolchain are also on the horizon in the near future.
 
