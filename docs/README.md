@@ -72,7 +72,7 @@ The New Testamanent texts in Syntacticus have been aligned with the Ancient Gree
 
 All treebank data and other linguistic resources available from Syntacticus have been made available to you by the copyright holders under a <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0</a> or <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0</a> license. In practice, this means you are free to use the data in a non-commercial setting as long as you provide complete attribution. You may also extract a subset of the data or derive a new data set by processing data from Syntacticus, but you must then make it freely available under the same license.
 
-If you use this data in academic work, we ask that you cite the publication that the treebank editor has listed on their website. Please see the pages for the <a href="https://proiel.github.io/">PROIEL Treebank</a>, the <a href="https://torottreebank.github.io/">TOROT Treebank</a> and the <a href="https://iswoc.github.io/">ISWOC Treebank</a> for this information.
+If you use this data in academic work, we ask that you cite the publication that the treebank editor has listed on their website. Please see the pages for the <a href="/proiel/">PROIEL Treebank</a>, the <a href="https://torottreebank.github.io/">TOROT Treebank</a> and the <a href="/iswoc/">ISWOC Treebank</a> for this information.
 
 You can also link directly to texts, sentences, dictionaries and lemmas. To do this, click on the yellow <em>Details</em> button and copy the permanent link to the page. This link includes information about the version of the data that you have accessed.
 

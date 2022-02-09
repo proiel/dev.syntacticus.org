@@ -87,7 +87,7 @@ was financed by the Norwegian Research Council. It originally comprised the New
 Testament in Ancient Greek and its translations into Latin, Old Church
 Slavonic, Gothic and Classical Armenian. The treebank has since been expanded
 to include ancient Indo-European texts in general and has spawned the
-[TOROT](http://torottreebank.github.io/) and [ISWOC](https://iswoc.github.io/)
+[TOROT](http://torottreebank.github.io/) and [ISWOC](/iswoc/)
 treebanks, which are complementary to the PROIEL Treebank.
 
 We are constantly expanding the treebank. The following texts are in the

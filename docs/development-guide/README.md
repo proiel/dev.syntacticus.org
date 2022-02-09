@@ -29,8 +29,8 @@ If you want to create a new PROIEL treebank and set up your own infrastructure f
 The PROIEL treebanking framework is currently used by the following treebanking projects:
 
 * [The Tromsø Old Russian and OCS Treebank (TOROT)](http://torottreebank.github.io/)
-* [The PROIEL Treebank](http://proiel.github.io/)
-* [Information Structure and Word Order Change in Germanic and Romance Languages (ISWOC)](http://iswoc.github.io/)
+* [The PROIEL Treebank](/proiel/)
+* [Information Structure and Word Order Change in Germanic and Romance Languages (ISWOC)](/iswoc/)
 * [Menotec](http://foni.uio.no:3000)
 
 ## Software
@@ -97,7 +97,7 @@ Command line               | Target format
 `proiel convert tnt`       | TNT/hunpos format
 `proiel convert proielxml` | PROIEL XML format
 
-Note that official releases of the PROIEL treebank already include CoNLL-X files. These can be downloaded from the [PROIEL treebank](http://proiel.github.io/).
+Note that official releases of the PROIEL treebank already include CoNLL-X files. These can be downloaded from the [PROIEL treebank](/proiel/).
 
 Conversion to CoNLL-U is experimental and the output is likely to evolve as the Universal Dependencies project matures. Curated versions of the PROIEL treebank on CoNLL-U format can be downloaded from the [Universal Dependencies](http://universaldependencies.org/) project.
 
