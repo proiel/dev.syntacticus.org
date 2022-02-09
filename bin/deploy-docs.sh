@@ -3,7 +3,7 @@
 # Deploy docs/ to dev.syntacticus.org hosted by GitHub Pages.
 #
 set -e
-npm run docs:build
+yarn run build
 cd docs/.vuepress/dist
 git init
 echo 'dev.syntacticus.org' > CNAME
