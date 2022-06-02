@@ -11,12 +11,6 @@ npm install
 npm run docs:dev
 ```
 
-The site is automatically deployed by [Travis
-CI](https://vuepress.vuejs.org/guide/deploy.html#github-pages). See the build
-history
-[here](https://app.travis-ci.com/github/proiel/dev.syntacticus.org/builds/) for
-the latest deployments.
-
 To manually build and deploy run
 
 ```shell
