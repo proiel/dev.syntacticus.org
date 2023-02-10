@@ -16,3 +16,9 @@ To manually build and deploy run
 ```shell
 yarn run deploy
 ```
+
+Note: vuepress is in maintenance mode and the 'successor' is apparently in
+alpha stage. At least on Arch Linux, the vuepress build breaks due to some
+issue or other with webpack. The workaround is `export
+NODE_OPTIONS=--openssl-legacy-provider`. Our long-term plan is to switch to
+Astro.
