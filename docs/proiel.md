@@ -52,7 +52,7 @@ If you use the treebank, please cite as:
 
 See also the following articles for further details:
 
-> Dag T. T. Haug, Marius L. Jøhndal, Hanne M. Eckhoff, Mari Johanne Hertzenberg and Angelika Müth. 2009. '<a href="http://www.atala.org/IMG/pdf/TAL-2009-50-2-01-Haug.pdf">Computational and Linguistic Issues in Designing a Syntactically Annotated Parallel Corpus of Indo-European Languages</a>'. <em>Traitement automatique des langues</em> 50 (2): 17-45.
+> Dag T. T. Haug, Marius L. Jøhndal, Hanne M. Eckhoff, Eirik Welo, Mari Johanne Hertzenberg and Angelika Müth. 2009. '<a href="http://www.atala.org/IMG/pdf/TAL-2009-50-2-01-Haug.pdf">Computational and Linguistic Issues in Designing a Syntactically Annotated Parallel Corpus of Indo-European Languages</a>'. <em>Traitement automatique des langues</em> 50 (2): 17-45.
 
 > Dag T. T. Haug, Hanne M. Eckhoff, Marek Majer and Eirik Welo. 2009. '<a href="http://booksandjournals.brillonline.com/content/journals/10.1163/156658409x12529372103308">Breaking down and putting back together: analysis and synthesis of New Testament Greek</a>'. <em>Journal of Greek Linguistics</em> 9 (1): 56-92.
 
